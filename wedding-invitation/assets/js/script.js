@@ -94,7 +94,7 @@ function spawnSealBurst(x, y) {
 }
 
 function spawnPetals(count){
-  const emojis = ['🌸','🌺','🌼','💮','✨','💛'];
+  const emojis = ['🌸','🌺','🌼','💮','✨','💛','🍃','🍲'];
   for(let i=0;i<count;i++){
     setTimeout(()=>{
       const p = document.createElement('div');

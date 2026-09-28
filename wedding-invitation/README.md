@@ -1,4 +1,4 @@
-# Subash & Akila — Wedding Invitation
+# Boobalan & Saranya — Wedding Invitation
 
 A single-page, animated wedding invitation site (envelope intro, countdown,
 gallery, timeline, family tree, RSVP-free contact/share buttons).
