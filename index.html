@@ -37,7 +37,7 @@
         <!-- Postal Stamp & Postmark badge -->
         <div class="post-stamp" id="postStamp">
           <div class="post-stamp-inner">
-            <svg class="stamp-ring-svg" viewBox="0 0 32 32" width="22" height="22" fill="none">
+            <svg class="stamp-ring-svg" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="url(#stampGoldGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <defs>
                 <linearGradient id="stampGoldGrad" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0%" stop-color="#fff8e7" />
@@ -45,11 +45,10 @@
                   <stop offset="100%" stop-color="#a07429" />
                 </linearGradient>
               </defs>
-              <circle cx="12" cy="18" r="7" stroke="url(#stampGoldGrad)" stroke-width="2" fill="none" />
-              <circle cx="20" cy="14" r="7" stroke="url(#stampGoldGrad)" stroke-width="2" fill="none" />
-              <polygon points="20,4 22,7 25,7 23,9 24,12 20,10 16,12 17,9 15,7 18,7" fill="url(#stampGoldGrad)" />
+              <path d="M11 23 H21 L22 17 H10 Z" />
+              <path d="M10 17 C6 17 6 10 11 10 C12 6 20 6 21 10 C26 10 26 17 22 17" />
             </svg>
-            <span class="stamp-val">13.11</span>
+            <span class="stamp-val">16.11</span>
           </div>
           <div class="post-mark">
             <svg width="60" height="60" viewBox="0 0 64 64" class="postmark-svg">
@@ -59,12 +58,12 @@
               <!-- Inner ring -->
               <circle cx="32" cy="32" r="23" stroke="#ffd175" stroke-width="1.2" fill="none" />
               <!-- High-contrast bold typography -->
-              <text x="32" y="21" text-anchor="middle" font-family="'Marcellus', serif" font-size="7.5"
-                font-weight="700" fill="#ffffff" letter-spacing="1.5">ROYAL POST</text>
+              <text x="32" y="21" text-anchor="middle" font-family="'Marcellus', serif" font-size="6.5"
+                font-weight="700" fill="#ffffff" letter-spacing="1">CHEF'S SPECIAL</text>
               <text x="32" y="32" text-anchor="middle" font-family="'Marcellus', serif" font-size="7" font-weight="700"
-                fill="#ffe5ab" letter-spacing="1">13 · NOV · 2026</text>
+                fill="#ffe5ab" letter-spacing="1">16 · NOV · 2026</text>
               <text x="32" y="42" text-anchor="middle" font-family="'Marcellus', serif" font-size="6" font-weight="700"
-                fill="#ffd175" letter-spacing="1.2">★ WEDDING ★</text>
+                fill="#ffd175" letter-spacing="1.2">★ BANQUET ★</text>
               <!-- Cancellation postal waves -->
               <path d="M-8 27 Q2 23 12 27 T32 27" stroke="#ffe5ab" stroke-width="1.4" fill="none" opacity="0.85" />
               <path d="M-8 33 Q2 29 12 33 T32 33" stroke="#ffe5ab" stroke-width="1.4" fill="none" opacity="0.85" />
@@ -88,7 +87,7 @@
             <div class="letter-crest">✦ ⚭ ✦</div>
             <div class="letter-title">Wedding Invitation</div>
             <div class="letter-couple">Boobalan &amp; Saranya</div>
-            <div class="letter-date">Friday, 13 November 2026</div>
+            <div class="letter-date">Monday, 16 November 2026</div>
             <div class="letter-tag">Subha Muhurtham</div>
           </div>
 
@@ -160,21 +159,28 @@
       <p class="reveal" style="margin-top:10px; font-size:1.2rem;">We joyfully invite you to celebrate the wedding of
       </p>
 
-      <div class="couple-names reveal gold-text"><span class="name-text">P. <span class="groom-first-letter-wrap"><svg
-              class="groom-chef-hat" viewBox="0 0 30 26" aria-label="South Indian Chef">
-              <defs>
-                <linearGradient id="chefHatGold" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#fffce8" />
-                  <stop offset="50%" stop-color="#ffd175" />
-                  <stop offset="100%" stop-color="#c8963e" />
-                </linearGradient>
-              </defs>
-              <path fill="url(#chefHatGold)"
-                d="M22 8.5C21.1 8.5 20.3 8.9 19.8 9.6C18.9 7.4 16.8 5.8 14.3 5.8C11.6 5.8 9.3 7.5 8.6 9.9C7.8 9.5 6.9 9.2 6 9.2C3.5 9.2 1.5 11.2 1.5 13.7C1.5 15.9 3 17.7 5 18.2V22C5 23.1 5.9 24 7 24H21.6C22.7 24 23.6 23.1 23.6 22V18.2C25.7 17.7 27.1 15.9 27.1 13.7C27.1 10.8 24.8 8.5 22 8.5ZM21.6 22H7V19.2H21.6V22Z" />
-              <path d="M10 13V17.5" stroke="#684614" stroke-width="0.8" opacity="0.75" />
-              <path d="M14.3 12V17.5" stroke="#684614" stroke-width="0.8" opacity="0.75" />
-              <path d="M18.6 13V17.5" stroke="#684614" stroke-width="0.8" opacity="0.75" />
-            </svg>B</span>oobalan DTHM., DSCM.,</span></div>
+      <div class="couple-names reveal gold-text">
+        <div class="name-text" style="display:flex; flex-direction:column; align-items:center;">
+          <div>P. <span class="groom-first-letter-wrap" style="position:relative; display:inline-block;"><svg
+                class="groom-chef-hat" viewBox="0 0 30 26" aria-label="South Indian Chef" style="position:absolute; top:-12px; left:50%; transform:translateX(-30%) rotate(-6deg); width:30px;">
+                <defs>
+                  <linearGradient id="chefHatGold" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#fffce8" />
+                    <stop offset="50%" stop-color="#ffd175" />
+                    <stop offset="100%" stop-color="#c8963e" />
+                  </linearGradient>
+                </defs>
+                <path fill="url(#chefHatGold)"
+                  d="M22 8.5C21.1 8.5 20.3 8.9 19.8 9.6C18.9 7.4 16.8 5.8 14.3 5.8C11.6 5.8 9.3 7.5 8.6 9.9C7.8 9.5 6.9 9.2 6 9.2C3.5 9.2 1.5 11.2 1.5 13.7C1.5 15.9 3 17.7 5 18.2V22C5 23.1 5.9 24 7 24H21.6C22.7 24 23.6 23.1 23.6 22V18.2C25.7 17.7 27.1 15.9 27.1 13.7C27.1 10.8 24.8 8.5 22 8.5ZM21.6 22H7V19.2H21.6V22Z" />
+                <path d="M10 13V17.5" stroke="#684614" stroke-width="0.8" opacity="0.75" />
+                <path d="M14.3 12V17.5" stroke="#684614" stroke-width="0.8" opacity="0.75" />
+                <path d="M18.6 13V17.5" stroke="#684614" stroke-width="0.8" opacity="0.75" />
+              </svg>B</span>oobalan</div>
+          <div style="font-size: 0.35em; font-family: 'Inter', sans-serif; letter-spacing: 2px; border-top: 1px solid rgba(212, 175, 106, 0.4); border-bottom: 1px solid rgba(212, 175, 106, 0.4); padding: 5px 15px; margin-top: 12px; color: var(--gold-light); text-transform: uppercase;">
+            DTHM., DSCM.,
+          </div>
+        </div>
+      </div>
 
       <div class="couple-profession reveal">South India Chef 👨‍🍳</div>
 
@@ -184,7 +190,14 @@
         <div class="weds-line"></div>
       </div>
 
-      <div class="couple-names reveal gold-text"><span class="name-text">S. Saranya B.Com (CA) .,</span></div>
+      <div class="couple-names reveal gold-text">
+        <div class="name-text" style="display:flex; flex-direction:column; align-items:center;">
+          <div>S. Saranya</div>
+          <div style="font-size: 0.35em; font-family: 'Inter', sans-serif; letter-spacing: 2px; border-top: 1px solid rgba(212, 175, 106, 0.4); border-bottom: 1px solid rgba(212, 175, 106, 0.4); padding: 5px 15px; margin-top: 12px; color: var(--gold-light); text-transform: uppercase;">
+            B.Com (CA).,
+          </div>
+        </div>
+      </div>
 
       <div class="ornament">
         <div class="line"></div>
@@ -229,7 +242,7 @@
               <line x1="33" y1="5" x2="33" y2="10" stroke="url(#goldIconDate)" stroke-width="2.5"
                 stroke-linecap="round" />
               <text x="24" y="34" text-anchor="middle" font-family="'Marcellus', serif" font-size="12" font-weight="700"
-                fill="url(#goldIconDate)">13</text>
+                fill="url(#goldIconDate)">16</text>
               <circle cx="24" cy="30" r="9" stroke="url(#goldIconDate)" stroke-width="1" stroke-dasharray="2 2"
                 fill="none" />
             </svg>
@@ -239,7 +252,7 @@
           <div class="card-ornament"><span></span>✦<span></span></div>
           <div class="event-val">Monday, 16 Nov 2026</div>
           <p class="event-sub">Parabhava Varudam · Iyppasi</p>
-          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Boobalan+%26+Saranya+Wedding&amp;dates=20261113T003000Z/20261113T083000Z&amp;details=Wedding+Ceremony+%26+Reception+of+Boobalan+%26+Saranya&amp;location=Sri+Velavar+Thirumana+Mandabam,+Udumalai+Road,+Dharapuram"
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Boobalan+%26+Saranya+Wedding&amp;dates=20261116T003000Z/20261116T083000Z&amp;details=Wedding+Ceremony+%26+Reception+of+Boobalan+%26+Saranya&amp;location=Sri+Velavar+Thirumana+Mandabam,+Udumalai+Road,+Dharapuram"
             target="_blank" rel="noopener noreferrer" class="card-action-btn" title="Add to Google Calendar">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -389,11 +402,42 @@
       <h2 class="gold-text">Kalyana Virundhu 🍃</h2>
       <div class="ornament">
         <div class="line"></div>
-        <div class="diamond"></div>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--gold-light)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 15px; overflow:visible;">
+          <!-- Serving Cloche Base -->
+          <path d="M3 17h18" />
+          <!-- Cloche Dome -->
+          <path d="M5 17a7 7 0 0 1 14 0" />
+          <!-- Top Handle -->
+          <circle cx="12" cy="8.5" r="1.5" fill="var(--gold-light)" stroke="none" />
+          
+          <!-- Animated Steam -->
+          <path class="steam-anim steam-1" d="M9 4 Q10 2 9 0" opacity="0" />
+          <path class="steam-anim steam-2" d="M12 3 Q13 0 11 -3" opacity="0" />
+          <path class="steam-anim steam-3" d="M15 4 Q14 2 15 0" opacity="0" />
+        </svg>
         <div class="line right"></div>
       </div>
+      
+      <style>
+        @keyframes steamRise {
+          0% { transform: translateY(0px); opacity: 0; }
+          20% { opacity: 0.8; }
+          80% { opacity: 0.8; }
+          100% { transform: translateY(-10px); opacity: 0; }
+        }
+        .steam-anim { animation: steamRise 3s infinite ease-in-out; }
+        .steam-1 { animation-delay: 0s; }
+        .steam-2 { animation-delay: 1s; }
+        .steam-3 { animation-delay: 2s; }
+      </style>
+      
       <div class="glass virundhu-card reveal">
-        <div class="virundhu-badge">👨‍🍳 Curated by South Indian Chef P. Boobalan</div>
+        <div class="virundhu-badge">
+          <svg width="18" height="18" viewBox="0 0 30 26" style="margin-right:6px; vertical-align:middle; fill:url(#chefHatGold);">
+            <path d="M22 8.5C21.1 8.5 20.3 8.9 19.8 9.6C18.9 7.4 16.8 5.8 14.3 5.8C11.6 5.8 9.3 7.5 8.6 9.9C7.8 9.5 6.9 9.2 6 9.2C3.5 9.2 1.5 11.2 1.5 13.7C1.5 15.9 3 17.7 5 18.2V22C5 23.1 5.9 24 7 24H21.6C22.7 24 23.6 23.1 23.6 22V18.2C25.7 17.7 27.1 15.9 27.1 13.7C27.1 10.8 24.8 8.5 22 8.5ZM21.6 22H7V19.2H21.6V22Z" />
+          </svg>
+          Curated by South Indian Chef P. Boobalan
+        </div>
         <h3 class="virundhu-title gold-text">Traditional Royal South Indian Wedding Feast</h3>
         <p class="virundhu-desc">
           Celebrate with us as we serve an authentic, lavish South Indian Banana Leaf Banquet (வாழை இலை விருந்து) —
@@ -418,11 +462,11 @@
       </div>
       <div class="map-frame">
         <iframe
-          src="https://maps.google.com/maps?q=Sri%20Velavar%20Thirumana%20Mandabam%20Udumalai%20Road%20Dharapuram&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=G.M%20Mahal%20Thuraiyur%20Road%20Thiruvellarai&t=&z=14&ie=UTF8&iwloc=&output=embed"
           width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
       </div>
       <a class="btn"
-        href="https://www.google.com/maps/search/?api=1&query=Sri+Velavar+Thirumana+Mandabam+Udumalai+Road+Dharapuram"
+        href="https://www.google.com/maps/search/?api=1&query=G.M+Mahal+Thuraiyur+Road+Thiruvellarai"
         target="_blank">📍 View Location</a>
     </section>
 
@@ -511,47 +555,99 @@
         <div class="tree-side groom-tree">
           <div class="tree-heading-badge">🌼 Groom's Family</div>
 
-          <!-- Parents Card -->
-          <div class="tree-card parent-card">
-            <div class="tree-role-tag">Parents</div>
-            <div class="tree-person-name">Mr. Palanisamy &amp; Mrs. Pangajam</div>
-          </div>
-
-          <!-- Descending Line Stem -->
-          <div class="tree-stem">
-            <div class="stem-line"></div>
-            <div class="stem-dot"></div>
-          </div>
-
-          <!-- Horizontal Branch Split -->
-          <div class="tree-branch-split">
-            <div class="branch-bar"></div>
-          </div>
-
-          <!-- Dual Children Branches -->
-          <div class="tree-children-container dual-children">
-            <!-- Brother Card -->
-            <div class="child-branch">
-              <div class="sub-stem-line"></div>
-              <div class="tree-card child-card">
-                <div class="tree-role-tag">Brother</div>
-                <div class="tree-person-name">Srikanth alias Yogesh <span class="tree-degree">B.E.</span></div>
-                <div class="tree-profession">Automation Test Engineer</div>
+          <!-- Parents Group -->
+          <div style="display:flex; flex-direction:column; align-items:center; width:100%;">
+            
+            <!-- Parents Row -->
+            <div style="display:flex; justify-content:center; align-items:stretch; width:100%;">
+              
+              <!-- Father Card -->
+              <div class="tree-card parent-card" style="flex:1; margin:0; padding:12px 8px; max-width:170px; z-index:2;">
+                <div class="tree-role-tag" style="font-size:0.6rem; margin-bottom:4px;">Father</div>
+                <div class="tree-person-name" style="font-size:0.95rem; line-height:1.2;">Mr. Palanisamy</div>
+                <div class="tree-profession" style="font-size:0.75rem; line-height:1.2; margin-top:6px; color:var(--gold-light); text-transform:none;">
+                  Deputy Manager, BGR Energy Systems
+                </div>
               </div>
-            </div>
 
-            <!-- Sister Card -->
-            <div class="child-branch">
-              <div class="sub-stem-line"></div>
-              <div class="tree-card child-card">
-                <div class="tree-role-tag">Sister &amp; Brother-in-Law</div>
-                <div class="tree-person-name">Sister &amp; Mr. Selvaraj</div>
-                <div class="tree-profession"
-                  style="text-transform:none; letter-spacing:1px; margin-top:5px; color:var(--gold-light);">
-                  <span style="opacity:0.8;">Children:</span> Ajay Kumaran, Kiruba Shankar
+              <!-- Connecting ring -->
+              <div style="display:flex; align-items:center; justify-content:center; margin: 0 -8px; z-index:1;">
+                <div style="width:12px; height:1.5px; background:var(--gold-light); opacity:0.5;"></div>
+                <div style="font-size:0.9rem; background:radial-gradient(ellipse at top, rgba(42, 28, 14, 0.92), rgba(16, 10, 4, 0.96)); padding:4px; border-radius:50%; border:1px solid var(--gold-light);">⚭</div>
+                <div style="width:12px; height:1.5px; background:var(--gold-light); opacity:0.5;"></div>
+              </div>
+              
+              <!-- Mother Card -->
+              <div class="tree-card parent-card" style="flex:1; margin:0; padding:12px 8px; max-width:170px; z-index:2;">
+                <div class="tree-role-tag" style="font-size:0.6rem; margin-bottom:4px;">Mother</div>
+                <div class="tree-person-name" style="font-size:0.95rem; line-height:1.2;">Mrs. Pangajam</div>
+                <!-- Invisible Spacer -->
+                <div class="tree-profession" style="font-size:0.75rem; line-height:1.2; margin-top:6px; visibility:hidden;">
+                  Deputy Manager, BGR Energy Systems
                 </div>
               </div>
             </div>
+
+            <!-- Descending Line Stem -->
+            <div class="tree-stem" style="margin-top:0;">
+              <div class="stem-line" style="height:25px;"></div>
+              <div class="stem-dot"></div>
+            </div>
+          </div>
+
+          <!-- Sister & Family Group -->
+          <div class="tree-children-container" style="display:flex; flex-direction:column; align-items:center; width:100%; margin-top:5px; overflow:visible;">
+            
+            <!-- Sister & BIL Row -->
+            <div style="display:flex; justify-content:center; align-items:stretch; width:100%;">
+              
+              <!-- Sister Card -->
+              <div class="tree-card child-card" style="flex:1; margin:0; padding:12px 8px; max-width:170px; z-index:2;">
+                <div class="tree-role-tag" style="font-size:0.65rem;">Sister</div>
+                <div class="tree-person-name" style="font-size:1rem;">Mrs. Rubini <br><span class="tree-degree" style="margin-left:0; margin-top:2px;">B.E.,</span></div>
+                <!-- Invisible spacer -->
+                <div class="tree-profession" style="font-size:0.75rem; margin-top:6px; visibility:hidden;">Hitachi, Bangalore</div>
+              </div>
+
+              <!-- Connecting ring -->
+              <div style="display:flex; align-items:center; justify-content:center; margin: 0 -8px; z-index:1;">
+                <div style="width:12px; height:1.5px; background:var(--gold-light); opacity:0.5;"></div>
+                <div style="z-index:1; font-size:0.9rem; background:radial-gradient(ellipse at top, rgba(42, 28, 14, 0.92), rgba(16, 10, 4, 0.96)); padding:4px; border-radius:50%; border:1px solid var(--gold-light);">💍</div>
+                <div style="width:12px; height:1.5px; background:var(--gold-light); opacity:0.5;"></div>
+              </div>
+              
+              <!-- BIL Card -->
+              <div class="tree-card child-card" style="flex:1; margin:0; padding:12px 8px; max-width:170px; z-index:2;">
+                <div class="tree-role-tag" style="font-size:0.65rem;">Brother-in-Law</div>
+                <div class="tree-person-name" style="font-size:1rem; line-height:1.25;">Mr. Selvaraj <br><span class="tree-degree" style="margin-left:0; margin-top:4px;">M.Sc., MCA</span></div>
+                <div class="tree-profession" style="font-size:0.75rem; margin-top:6px;">Hitachi, Bangalore</div>
+              </div>
+            </div>
+
+            <!-- Stem from Sister to Kids -->
+            <div style="height:22px; width:1.5px; background:var(--gold-light); margin:0 auto; margin-top:10px; opacity:0.5;"></div>
+            
+            <!-- Kids Split -->
+            <div style="width:60%; height:1.5px; background:var(--gold-light); margin:0 auto; opacity:0.5;"></div>
+
+            <!-- Kids Cards -->
+            <div style="display:flex; justify-content:center; gap:16px; width:100%;">
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; max-width:130px;">
+                <div style="width:1.5px; height:15px; background:var(--gold-light); opacity:0.5;"></div>
+                <div class="tree-card child-card" style="padding:10px 8px; margin:0; width:100%;">
+                  <div class="tree-role-tag" style="font-size:0.6rem; margin-bottom:4px;">Son</div>
+                  <div class="tree-person-name" style="font-size:0.9rem;">Ajay Kumaran</div>
+                </div>
+              </div>
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; max-width:130px;">
+                <div style="width:1.5px; height:15px; background:var(--gold-light); opacity:0.5;"></div>
+                <div class="tree-card child-card" style="padding:10px 8px; margin:0; width:100%;">
+                  <div class="tree-role-tag" style="font-size:0.6rem; margin-bottom:4px;">Son</div>
+                  <div class="tree-person-name" style="font-size:0.9rem;">Kiruba Shankar</div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -559,26 +655,69 @@
         <div class="tree-side bride-tree">
           <div class="tree-heading-badge">🌸 Bride's Family</div>
 
-          <!-- Parents Card -->
-          <div class="tree-card parent-card">
-            <div class="tree-role-tag">Parents</div>
-            <div class="tree-person-name">Mr. Singaravelan DME., &amp; Mrs. Jothi</div>
+          <!-- Parents Group -->
+          <div style="display:flex; flex-direction:column; align-items:center; width:100%;">
+            
+            <!-- Parents Row -->
+            <div style="display:flex; justify-content:center; align-items:stretch; width:100%;">
+              
+              <!-- Father Card -->
+              <div class="tree-card parent-card" style="flex:1; margin:0; padding:12px 8px; max-width:170px; z-index:2;">
+                <div class="tree-role-tag" style="font-size:0.6rem; margin-bottom:4px;">Father</div>
+                <div class="tree-person-name" style="font-size:0.95rem; line-height:1.2;">Mr. Singaravelan <br><span class="tree-degree" style="margin-left:0; margin-top:4px;">DME.,</span></div>
+              </div>
+
+              <!-- Connecting ring -->
+              <div style="display:flex; align-items:center; justify-content:center; margin: 0 -8px; z-index:1;">
+                <div style="width:12px; height:1.5px; background:var(--gold-light); opacity:0.5;"></div>
+                <div style="font-size:0.9rem; background:radial-gradient(ellipse at top, rgba(42, 28, 14, 0.92), rgba(16, 10, 4, 0.96)); padding:4px; border-radius:50%; border:1px solid var(--gold-light);">⚭</div>
+                <div style="width:12px; height:1.5px; background:var(--gold-light); opacity:0.5;"></div>
+              </div>
+              
+              <!-- Mother Card -->
+              <div class="tree-card parent-card" style="flex:1; margin:0; padding:12px 8px; max-width:170px; z-index:2;">
+                <div class="tree-role-tag" style="font-size:0.6rem; margin-bottom:4px;">Mother</div>
+                <div class="tree-person-name" style="font-size:0.95rem; line-height:1.2;">Mrs. Jothi <br><span class="tree-degree" style="margin-left:0; margin-top:4px; visibility:hidden;">DME.,</span></div>
+              </div>
+            </div>
+
+            <!-- Descending Line Stem -->
+            <div class="tree-stem" style="margin-top:0;">
+              <div class="stem-line" style="height:25px;"></div>
+              <div class="stem-dot"></div>
+            </div>
           </div>
 
-          <!-- Descending Line Stem -->
-          <div class="tree-stem">
-            <div class="stem-line"></div>
-            <div class="stem-dot"></div>
-          </div>
+          <!-- Brother & Sister Cards -->
+          <div class="tree-children-container" style="display:flex; flex-direction:column; align-items:center; width:100%;">
+            
+            <!-- Split Line -->
+            <div style="width:65%; height:1.5px; background:var(--gold-light); margin:0 auto; opacity:0.5;"></div>
 
-          <!-- Brother & Sister-in-Law Card -->
-          <div class="tree-children-container">
-            <div class="tree-card child-card">
-              <div class="tree-role-tag">Elder Brother &amp; Sister-in-Law</div>
-              <div class="tree-person-name" style="line-height:1.5; padding: 5px 0;">S. Gowrisankar <span
-                  class="tree-degree" style="font-size:0.8em; font-weight:normal;">B.Sc., (Hotel Management &amp;
-                  Catering Service)</span><br>&amp; Swathi <span class="tree-degree"
-                  style="font-size:0.8em; font-weight:normal;">MCA</span></div>
+            <!-- Cards -->
+            <div style="display:flex; justify-content:center; gap:16px; width:100%;">
+              
+              <!-- Elder Brother -->
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; max-width:160px;">
+                <div style="width:1.5px; height:15px; background:var(--gold-light); opacity:0.5;"></div>
+                <div class="tree-card child-card" style="padding:12px 8px; margin:0; width:100%; height:100%;">
+                  <div class="tree-role-tag" style="font-size:0.6rem; margin-bottom:4px;">Elder Brother</div>
+                  <div class="tree-person-name" style="font-size:0.95rem; line-height:1.2;">S. Gowrisankar <br><span class="tree-degree" style="margin-left:0; margin-top:2px;">B.Sc.,</span></div>
+                  <div class="tree-profession" style="font-size:0.75rem; line-height:1.2; margin-top:6px; color:var(--gold-light); text-transform:none;">
+                    (Hotel Management &amp; Catering Service)
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Younger Sister -->
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; max-width:160px;">
+                <div style="width:1.5px; height:15px; background:var(--gold-light); opacity:0.5;"></div>
+                <div class="tree-card child-card" style="padding:12px 8px; margin:0; width:100%; height:100%;">
+                  <div class="tree-role-tag" style="font-size:0.6rem; margin-bottom:4px;">Younger Sister</div>
+                  <div class="tree-person-name" style="font-size:0.95rem; line-height:1.2;">S. Swathi <br><span class="tree-degree" style="margin-left:0; margin-top:2px;"><span style="text-decoration: overline;">MCA</span>.,</span></div>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -590,10 +729,10 @@
       <h2 class="gold-text">Share the Joy</h2>
       <div class="pill-row">
         <a class="pill"
-          href="https://wa.me/917868999367?text=You're%20invited%20to%20Boobalan%20%26%20Saranya's%20wedding!"
+          href="https://wa.me/916380503795?text=You're%20invited%20to%20Boobalan%20%26%20Saranya's%20wedding!"
           target="_blank">💬 WhatsApp Bride</a>
         <a class="pill"
-          href="https://wa.me/919952768800?text=You're%20invited%20to%20Boobalan%20%26%20Saranya's%20wedding!"
+          href="https://wa.me/918760337293?text=You're%20invited%20to%20Boobalan%20%26%20Saranya's%20wedding!"
           target="_blank">💬 WhatsApp Groom</a>
       </div>
     </section>
@@ -602,8 +741,8 @@
     <section>
       <h2 class="gold-text">Contact</h2>
       <div class="pill-row">
-        <a class="pill" href="tel:+917868999367">📞 Call Bride (Saranya)</a>
-        <a class="pill" href="tel:+919952768800">📞 Call Groom (Boobalan)</a>
+        <a class="pill" href="tel:+916380503795">📞 Call Bride (Saranya)</a>
+        <a class="pill" href="tel:+918760337293">📞 Call Groom (Boobalan)</a>
       </div>
     </section>
 
