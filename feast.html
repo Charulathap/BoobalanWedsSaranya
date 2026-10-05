@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boobalan &amp; Saranya · A Royal Wedding Feast</title>
+<meta name="description" content="Chef P. Boobalan & S. Saranya invite you to their wedding on Monday, 16 November 2026 at G.M Mahal, Thiruvellarai.">
+<meta name="theme-color" content="#f4eee1">
+<meta property="og:title" content="Boobalan & Saranya · A Royal Wedding Feast">
+<meta property="og:description" content="Monday, 16 November 2026 · 9:15 – 10:15 AM · G.M Mahal, Thiruvellarai">
+<meta property="og:image" content="assets/images/img1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&family=Marcellus&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fx-linen:#f4eee1; --fx-paper:#fcf9f2; --fx-paper2:#f6efe0;
+  --fx-leaf:#3d7a2e; --fx-leaf-d:#23502a; --fx-leaf-l:#8fb85a;
+  --fx-tur:#e2a32a; --fx-tur-l:#f3cf73; --fx-chilli:#b8321f;
+  --fx-brass:#b08a3e; --fx-gold:#c9a14a; --fx-gold-d:#7d5e22;
+  --fx-ink:#2b2824; --fx-ink2:#5b554b; --fx-line:rgba(176,138,62,.42);
+  --fx-serif:'Cormorant Garamond',Georgia,serif; --fx-sans:'Jost',system-ui,sans-serif;
+  --fx-caps:'Marcellus','Cormorant Garamond',serif; --fx-script:'Pinyon Script',cursive;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html.fx-locked,html.fx-locked body{overflow:hidden;height:100%}
+body{margin:0;background:var(--fx-linen);color:var(--fx-ink);font-family:var(--fx-sans);font-weight:400;font-size:16px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.fx-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- 3D canvas + veil ---------- */
+#fxGL{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0;pointer-events:none}
+.fx-veil{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0;transition:opacity 1.6s ease;
+  background:radial-gradient(120% 80% at 50% 50%,rgba(250,246,236,.10),rgba(244,238,225,.55) 75%)}
+html.fx-open .fx-veil{opacity:1}
+html.fx-nogl body{background:
+  radial-gradient(60% 40% at 80% 10%,rgba(143,184,90,.18),transparent 70%),
+  radial-gradient(50% 40% at 10% 90%,rgba(226,163,42,.14),transparent 70%),
+  repeating-linear-gradient(0deg,rgba(150,130,100,.04) 0 1px,transparent 1px 3px),
+  repeating-linear-gradient(90deg,rgba(150,130,100,.04) 0 1px,transparent 1px 3px),var(--fx-linen)}
+
+/* ---------- Progress, music, toast ---------- */
+.fx-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;transform-origin:0 50%;transform:scaleX(0);
+  background:linear-gradient(90deg,var(--fx-leaf),var(--fx-tur),var(--fx-gold));opacity:0;transition:opacity .6s}
+html.fx-open .fx-progress{opacity:1}
+.fx-music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:55;width:52px;height:52px;border-radius:50%;
+  border:1px solid var(--fx-line);background:rgba(252,249,242,.92);box-shadow:0 8px 24px rgba(60,45,20,.18);cursor:pointer;
+  display:grid;place-items:center;opacity:0;transform:scale(.6);transition:opacity .5s,transform .5s cubic-bezier(.3,1.5,.5,1);pointer-events:none;backdrop-filter:blur(6px)}
+html.fx-open .fx-music{opacity:1;transform:none;pointer-events:auto}
+.fx-music-bars{display:flex;align-items:flex-end;gap:3px;height:18px}
+.fx-music-bars i{width:3px;height:6px;border-radius:2px;background:var(--fx-leaf);transform-origin:bottom}
+.fx-music.fx-playing .fx-music-bars i{animation:fx-eq 1s ease-in-out infinite}
+.fx-music-bars i:nth-child(2){animation-delay:-.3s!important;background:var(--fx-tur)}
+.fx-music-bars i:nth-child(3){animation-delay:-.6s!important}
+.fx-music-bars i:nth-child(4){animation-delay:-.15s!important;background:var(--fx-gold)}
+.fx-music:not(.fx-playing)::after{content:"";position:absolute;width:30px;height:2px;background:var(--fx-ink2);transform:rotate(-45deg);border-radius:2px}
+@keyframes fx-eq{0%,100%{height:5px}50%{height:18px}}
+.fx-toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));z-index:80;transform:translate(-50%,20px);opacity:0;pointer-events:none;
+  background:var(--fx-ink);color:#fbf6ea;padding:10px 18px;border-radius:999px;font-size:14px;letter-spacing:.02em;transition:.35s;max-width:calc(100vw - 32px);text-align:center}
+.fx-toast.fx-show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- Intro ---------- */
+.fx-intro{position:fixed;inset:0;z-index:40;display:flex;flex-direction:column;justify-content:space-between;align-items:center;
+  padding:calc(22px + env(safe-area-inset-top)) 16px calc(26px + env(safe-area-inset-bottom));cursor:pointer;text-align:center;
+  transition:opacity 1.1s ease, visibility 1.1s;outline:none;-webkit-tap-highlight-color:transparent}
+.fx-intro::before,.fx-intro::after{content:"";position:absolute;left:0;right:0;pointer-events:none;z-index:-1}
+.fx-intro::before{top:0;height:46%;background:linear-gradient(rgba(246,240,227,.94),rgba(246,240,227,.7) 55%,rgba(246,240,227,0))}
+.fx-intro::after{bottom:0;height:30%;background:linear-gradient(rgba(246,240,227,0),rgba(246,240,227,.85) 60%,rgba(246,240,227,.95))}
+html.fx-open .fx-intro{opacity:0;visibility:hidden;pointer-events:none}
+.fx-intro.fx-opening{cursor:default}
+.fx-intro.fx-opening .fx-intro-top,.fx-intro.fx-opening .fx-intro-bottom{opacity:0;transform:translateY(-14px);transition:opacity .8s,transform .8s}
+.fx-intro.fx-opening .fx-intro-bottom{transform:translateY(14px)}
+.fx-intro-top,.fx-intro-bottom{position:relative;max-width:620px;width:100%}
+.fx-kicker{font-family:var(--fx-caps);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--fx-gold-d);margin:0 0 8px;
+  animation:fx-rise 1.2s .2s both}
+.fx-intro-title{margin:0;font-family:var(--fx-serif);font-weight:500;line-height:1.02;color:var(--fx-ink)}
+.fx-intro-title span{display:block;font-size:clamp(20px,5.2vw,30px);font-style:italic;color:var(--fx-ink2);animation:fx-rise 1.2s .45s both}
+.fx-intro-title em{display:block;font-style:normal;font-weight:600;font-size:clamp(40px,11vw,76px);letter-spacing:.01em;
+  background:linear-gradient(100deg,#6d4f17,#b48a34 30%,#e4c271 48%,#a97d2a 62%,#6d4f17);background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:fx-rise 1.3s .65s both,fx-sheen 6s 2s linear infinite}
+.fx-intro-couple{font-family:var(--fx-script);font-size:clamp(30px,8vw,46px);color:var(--fx-leaf-d);margin:6px 0 0;line-height:1.1;animation:fx-rise 1.2s .9s both}
+.fx-intro-couple span{color:var(--fx-gold);font-size:.8em}
+.fx-intro-date{margin:6px 0 0;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--fx-ink2);animation:fx-rise 1.2s 1.1s both}
+.fx-greet{margin:14px auto 0;max-width:420px;padding:10px 16px;border:1px solid var(--fx-line);border-radius:14px;background:rgba(252,249,242,.85);
+  font-family:var(--fx-serif);font-size:19px;font-style:italic;color:var(--fx-ink);line-height:1.35;animation:fx-rise 1.2s 1.3s both}
+.fx-greet b{font-style:normal;font-weight:600;color:var(--fx-leaf-d)}
+.fx-lift{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;border:0;cursor:pointer;
+  background:linear-gradient(135deg,#2f6b33,#24502a);color:#fbf4df;font-family:var(--fx-caps);font-size:15px;letter-spacing:.16em;text-transform:uppercase;
+  box-shadow:0 10px 30px rgba(35,80,42,.35),inset 0 1px 0 rgba(255,255,255,.2);animation:fx-rise 1s 1.4s both,fx-pulse 2.2s 2.4s ease-in-out infinite}
+.fx-lift svg{width:22px;height:22px;color:var(--fx-tur-l)}
+.fx-lift-ring{position:absolute;inset:-6px;border-radius:999px;border:1.5px solid rgba(201,161,74,.7);animation:fx-ring 2.2s 2s ease-out infinite;pointer-events:none}
+.fx-lift-ring.r2{animation-delay:3.1s}
+.fx-intro-hint{margin:12px 0 0;font-size:12px;letter-spacing:.12em;color:var(--fx-ink2);text-transform:uppercase;animation:fx-rise 1s 1.7s both}
+@keyframes fx-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes fx-sheen{to{background-position:-220% 0}}
+@keyframes fx-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+@keyframes fx-ring{0%{transform:scale(.95);opacity:.9}100%{transform:scale(1.35,1.7);opacity:0}}
+
+/* fallback art (no WebGL) */
+.fx-fb{display:none;position:absolute;inset:0;z-index:-2;pointer-events:none;place-items:center}
+html.fx-nogl .fx-fb{display:grid}
+.fx-fb-leaf{position:absolute;width:min(88vw,720px);height:min(34vw,260px);top:50%;left:50%;transform:translate(-50%,-30%) rotate(-6deg);
+  border-radius:100% 14px 14px 100% / 60% 14px 14px 60%;
+  background:linear-gradient(180deg,transparent 48.6%,#d9e6a6 49.4%,#d9e6a6 50.6%,transparent 51.4%),
+  repeating-linear-gradient(100deg,rgba(255,255,255,.08) 0 2px,transparent 2px 9px),linear-gradient(180deg,#3f7f2a,#66a53e 50%,#3f7f2a);
+  box-shadow:0 18px 40px rgba(40,60,20,.25)}
+.fx-fb-pot{position:absolute;top:50%;left:50%;width:150px;height:150px;transform:translate(-50%,-48%)}
+.fx-fb-body{position:absolute;bottom:0;left:10px;right:10px;height:96px;border-radius:50% 50% 44% 44%/40% 40% 60% 60%;
+  background:radial-gradient(60% 50% at 35% 35%,#fff1c2,#d7a845 35%,#8a6420 80%);box-shadow:0 14px 26px rgba(60,40,10,.35)}
+.fx-fb-lid{position:absolute;top:8px;left:24px;right:24px;height:60px;border-radius:50% 50% 10% 10%/90% 90% 10% 10%;
+  background:radial-gradient(60% 60% at 35% 30%,#fff3cc,#d9ab4f 40%,#8a6420);transition:transform 1s cubic-bezier(.5,-.3,.4,1),opacity 1s}
+.fx-fb-lid::before{content:"";position:absolute;top:-12px;left:50%;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:#c9993d}
+.fx-intro.fx-opening .fx-fb-lid{transform:translate(120px,-160px) rotate(40deg);opacity:0}
+
+/* ---------- Main ---------- */
+.fx-main{position:relative;z-index:2;opacity:0;visibility:hidden;transition:opacity 1.2s ease .1s}
+html.fx-open .fx-main{opacity:1;visibility:visible}
+.fx-wrap{width:min(1120px,100%);margin:0 auto;padding:0 16px}
+.fx-gap{height:16vh}
+@media(min-width:900px){.fx-gap{height:30vh}}
+
+.fx-card{position:relative;background:
+  radial-gradient(120% 80% at 0% 0%,rgba(255,255,255,.6),transparent 60%),
+  linear-gradient(180deg,rgba(252,249,242,.97),rgba(247,241,228,.97));
+  border:1px solid var(--fx-line);border-radius:6px;padding:40px 22px 36px;
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 0 0 6px rgba(252,249,242,.9),0 0 0 7px var(--fx-line),0 30px 60px -20px rgba(70,50,15,.35),0 10px 20px -10px rgba(70,50,15,.2)}
+.fx-card::before,.fx-card::after{content:"";position:absolute;width:44px;height:44px;pointer-events:none;opacity:.9;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cg fill='none' stroke='%23b08a3e' stroke-width='1.3'%3E%3Cpath d='M3 41V14C3 7 7 3 14 3h27'/%3E%3Cpath d='M8 41V18c0-6 4-10 10-10h23'/%3E%3Cpath d='M14 14c4 0 6 2 6 6-4 0-6-2-6-6z' fill='%23c9a14a' fill-opacity='.35'/%3E%3C/g%3E%3C/svg%3E") no-repeat}
+.fx-card::before{top:10px;left:10px}
+.fx-card::after{bottom:10px;right:10px;transform:rotate(180deg)}
+@media(min-width:700px){.fx-card{padding:56px 56px 48px}}
+.fx-course{position:relative;max-width:680px;margin:0 auto}
+@media(min-width:1000px){.fx-course.fx-l{margin-left:2%}.fx-course.fx-r{margin-right:2%}}
+
+/* course header */
+.fx-head{text-align:center;position:relative;margin-bottom:26px}
+.fx-no{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;border:1px solid var(--fx-gold);font-family:var(--fx-caps);
+  color:var(--fx-gold-d);font-size:15px;background:radial-gradient(circle at 35% 30%,#fffaf0,#f1e3c2);box-shadow:0 0 0 4px rgba(201,161,74,.12)}
+.fx-kind{display:block;margin-top:10px;font-family:var(--fx-caps);letter-spacing:.32em;text-transform:uppercase;font-size:12.5px;color:var(--fx-leaf)}
+.fx-title{margin:4px 0 0;font-family:var(--fx-serif);font-weight:600;font-size:clamp(34px,8.5vw,52px);line-height:1.05;color:var(--fx-ink)}
+.fx-title i{font-weight:500;color:var(--fx-gold-d)}
+.fx-sprig{display:block;width:150px;height:26px;margin:10px auto 0;color:var(--fx-leaf)}
+.fx-lead{font-family:var(--fx-serif);font-style:italic;font-size:20px;line-height:1.45;color:var(--fx-ink2);text-align:center;margin:10px auto 0;max-width:30em}
+.fx-steam{position:absolute;top:-34px;left:50%;width:46px;height:60px;margin-left:-23px;pointer-events:none;overflow:visible}
+.fx-steam path{fill:none;stroke:rgba(176,138,62,.55);stroke-width:2;stroke-linecap:round;stroke-dasharray:70 140;stroke-dashoffset:70;opacity:0}
+.fx-in .fx-steam path{animation:fx-steamc 3.4s ease-in-out infinite}
+.fx-in .fx-steam path:nth-child(2){animation-delay:1.1s}
+.fx-in .fx-steam path:nth-child(3){animation-delay:2.2s}
+@keyframes fx-steamc{0%{stroke-dashoffset:70;opacity:0}25%{opacity:1}100%{stroke-dashoffset:-140;opacity:0}}
+
+/* plating reveal */
+.fx-pl{opacity:0;transform:translate(var(--fx-dx,0),var(--fx-dy,26px)) scale(var(--fx-s,1)) rotate(var(--fx-rot,0deg));
+  transition:opacity .8s ease var(--d,0s),transform 1s cubic-bezier(.22,1.25,.4,1) var(--d,0s)}
+.fx-in .fx-pl{opacity:1;transform:none}
+.fx-drop{--fx-dy:-60px}
+.fx-from-l{--fx-dx:-60px;--fx-dy:0}
+.fx-from-r{--fx-dx:60px;--fx-dy:0}
+.fx-pop{--fx-s:.6;--fx-dy:0}
+
+/* sprinkle garnish */
+.fx-garnish{position:absolute;inset:0;pointer-events:none;overflow:hidden;border-radius:6px}
+.fx-garnish span{position:absolute;left:var(--x);top:var(--y);opacity:0;transform:translateY(-140px) rotate(0deg);
+  transition:transform 1.3s cubic-bezier(.3,1.35,.5,1) var(--d),opacity .4s var(--d)}
+.fx-in .fx-garnish span{opacity:var(--o,.85);transform:translateY(0) rotate(var(--r))}
+.fx-g-mustard{width:5px;height:5px;border-radius:50%;background:#3b2a1c}
+.fx-g-tur{width:6px;height:6px;border-radius:50%;background:var(--fx-tur)}
+.fx-g-curry{width:14px;height:6px;border-radius:100% 0;background:linear-gradient(90deg,#2f6b2f,#4f8f37)}
+.fx-g-chilli{width:7px;height:3px;border-radius:2px;background:var(--fx-chilli)}
+.fx-g-cumin{width:8px;height:2.5px;border-radius:3px;background:#8a6a3a}
+
+/* menu leader lines */
+.fx-items{margin:22px 0 0;padding:0;list-style:none}
+.fx-item{display:flex;align-items:baseline;gap:8px;padding:9px 0;font-family:var(--fx-serif);font-size:19px}
+.fx-item>.fx-k{font-weight:600;color:var(--fx-ink);white-space:nowrap}
+.fx-item>.fx-dots{flex:1 1 20px;min-width:20px;border-bottom:2px dotted rgba(176,138,62,.55);transform:translateY(-5px)}
+.fx-item>.fx-v{text-align:right;color:var(--fx-ink2);max-width:62%;font-family:var(--fx-sans);font-size:15.5px;line-height:1.35}
+.fx-item>.fx-v b{color:var(--fx-ink);font-weight:500}
+
+/* buttons */
+.fx-btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+.fx-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 20px;border-radius:999px;cursor:pointer;
+  font-family:var(--fx-sans);font-weight:500;font-size:14.5px;letter-spacing:.04em;text-decoration:none;border:1px solid var(--fx-leaf);
+  background:var(--fx-leaf-d);color:#fbf4df;transition:transform .25s,box-shadow .25s,background .25s;box-shadow:0 6px 16px -6px rgba(35,80,42,.5)}
+.fx-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -8px rgba(35,80,42,.6)}
+.fx-btn.fx-ghost{background:transparent;color:var(--fx-leaf-d);box-shadow:none}
+.fx-btn.fx-ghost:hover{background:rgba(61,122,46,.08)}
+.fx-btn.fx-brass{background:linear-gradient(135deg,#c9a14a,#9b7428);border-color:#9b7428;color:#fffaf0;box-shadow:0 6px 16px -6px rgba(125,94,34,.6)}
+.fx-btn svg{width:18px;height:18px;flex:none}
+
+/* ---------- Cover ---------- */
+.fx-cover{padding-top:calc(36px + env(safe-area-inset-top))}
+.fx-cover .fx-card{max-width:620px;margin:0 auto;text-align:center;padding-top:46px}
+.fx-hat{width:58px;height:58px;color:var(--fx-gold-d);margin:0 auto}
+.fx-presents{font-family:var(--fx-caps);font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--fx-leaf);margin:10px 0 0}
+.fx-cover h1{margin:6px 0 0;font-family:var(--fx-serif);font-weight:600;font-size:clamp(44px,12vw,78px);line-height:.95;color:var(--fx-ink)}
+.fx-cover h1 i{display:block;font-size:.42em;font-weight:500;color:var(--fx-gold-d);letter-spacing:.02em;margin-bottom:6px}
+.fx-names{font-family:var(--fx-script);font-size:clamp(42px,11vw,64px);color:var(--fx-leaf-d);line-height:1.15;margin:14px 0 0}
+.fx-names span{color:var(--fx-gold);font-size:.7em;padding:0 .1em}
+.fx-cover-meta{margin:10px 0 0;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--fx-ink2);line-height:1.9}
+.fx-cover-meta b{color:var(--fx-ink);font-weight:500}
+.fx-table{display:inline-block;margin-top:18px;padding:8px 18px;border:1px dashed var(--fx-gold);border-radius:4px;font-family:var(--fx-serif);font-size:18px;font-style:italic;color:var(--fx-ink2);background:rgba(255,255,255,.5);max-width:100%}
+.fx-table b{font-style:normal;color:var(--fx-leaf-d);font-weight:600}
+.fx-index{list-style:none;margin:26px auto 0;padding:18px 0 0;border-top:1px solid var(--fx-line);max-width:460px;text-align:left}
+.fx-index li{display:flex;align-items:baseline;gap:8px;padding:5px 0;font-family:var(--fx-serif);font-size:17.5px}
+.fx-index a{display:contents;text-decoration:none}
+.fx-index .fx-rn{width:28px;font-family:var(--fx-caps);font-size:13px;color:var(--fx-gold-d)}
+.fx-index .fx-ik{color:var(--fx-ink2);font-style:italic;white-space:nowrap}
+.fx-index .fx-dots{flex:1 1 12px;min-width:12px;border-bottom:1.5px dotted rgba(176,138,62,.5);transform:translateY(-5px)}
+.fx-index .fx-iv{font-weight:600;color:var(--fx-ink);text-align:right}
+.fx-index li:hover .fx-iv{color:var(--fx-leaf)}
+.fx-cue{margin:26px 0 0;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--fx-ink2)}
+.fx-cue i{display:block;width:1px;height:34px;margin:8px auto 0;background:linear-gradient(var(--fx-gold),transparent);animation:fx-cue 2s ease-in-out infinite;transform-origin:top}
+@keyframes fx-cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* host box */
+.fx-host .fx-card{max-width:620px;margin:0 auto;text-align:center;border-style:dashed}
+.fx-host h3{margin:0;font-family:var(--fx-serif);font-size:28px;font-weight:600}
+.fx-host p{margin:6px 0 0;color:var(--fx-ink2);font-size:15px}
+.fx-input{width:100%;margin-top:16px;padding:13px 16px;border-radius:10px;border:1px solid var(--fx-line);background:#fff;font:inherit;font-size:16px;color:var(--fx-ink)}
+.fx-input:focus{outline:2px solid var(--fx-leaf);outline-offset:1px}
+
+/* Starter — plates */
+.fx-couple{display:grid;grid-template-columns:1fr;gap:6px;align-items:start;margin-top:10px}
+@media(min-width:700px){.fx-couple{grid-template-columns:1fr auto 1fr}}
+.fx-person{text-align:center}
+.fx-plate{position:relative;width:148px;height:148px;margin:0 auto;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle,#fffdf8 0 52%,#f1e9d6 53%,#fbf6ea 60%,#e8dcc0 66%,#fffaf0 70%);
+  box-shadow:0 0 0 3px #d8b866,0 0 0 5px #fffaf0,0 0 0 6px #b08a3e,0 18px 30px -10px rgba(70,50,15,.45)}
+.fx-plate span{font-family:var(--fx-script);font-size:64px;color:var(--fx-leaf-d);line-height:1;transform:translateY(4px)}
+.fx-plate::after{content:"";position:absolute;inset:16%;border-radius:50%;border:1px dashed rgba(176,138,62,.5)}
+.fx-in .fx-plate{animation:fx-platespin 1.4s cubic-bezier(.2,1,.3,1) both}
+.fx-person:nth-child(3) .fx-plate{animation-delay:.25s}
+@keyframes fx-platespin{from{transform:translateX(var(--fx-px,-80px)) rotate(-200deg);opacity:0}to{transform:none;opacity:1}}
+.fx-person:nth-child(3){--fx-px:80px}
+.fx-pname{margin:18px 0 0;font-family:var(--fx-serif);font-size:32px;font-weight:600;line-height:1.1}
+.fx-pdeg{margin:4px 0 0;font-family:var(--fx-caps);font-size:13px;letter-spacing:.14em;color:var(--fx-gold-d)}
+.fx-prole{display:inline-block;margin-top:8px;padding:3px 12px;border-radius:999px;background:rgba(61,122,46,.1);color:var(--fx-leaf-d);font-size:13px;letter-spacing:.06em}
+.fx-pof{margin:10px 0 0;font-family:var(--fx-serif);font-style:italic;font-size:18px;color:var(--fx-ink2);line-height:1.4}
+.fx-pof b{font-style:normal;font-weight:600;color:var(--fx-ink)}
+.fx-weds{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 0;font-family:var(--fx-script);font-size:38px;color:var(--fx-gold)}
+@media(min-width:700px){.fx-weds{padding-top:48px}}
+.fx-weds svg{width:64px;height:20px;color:var(--fx-leaf)}
+
+/* Main course — cloche */
+.fx-dome-stage{position:relative;margin:8px auto 0;max-width:480px}
+.fx-dome{position:absolute;left:50%;top:0;width:min(78%,320px);aspect-ratio:2/1.05;transform:translateX(-50%);z-index:3;pointer-events:none;
+  transition:transform 1.5s cubic-bezier(.55,-0.25,.3,1) .5s,opacity 1.2s ease .9s}
+.fx-dome::before{content:"";position:absolute;inset:0;border-radius:50% 50% 6px 6px/100% 100% 6px 6px;
+  background:radial-gradient(70% 90% at 32% 28%,#fff6d6 0,#e7c46d 22%,#b98d36 55%,#7d5a1d 92%);box-shadow:inset -10px -8px 24px rgba(80,55,15,.35),0 16px 30px -12px rgba(60,40,10,.5)}
+.fx-dome::after{content:"";position:absolute;left:50%;top:-14px;width:26px;height:20px;margin-left:-13px;border-radius:50% 50% 30% 30%;background:radial-gradient(circle at 35% 30%,#fff1c0,#b98d36 60%,#7d5a1d)}
+.fx-dome-rim{position:absolute;left:-4%;right:-4%;bottom:-6px;height:12px;border-radius:6px;background:linear-gradient(#e2bf6a,#8d6a24)}
+.fx-in .fx-dome{transform:translate(-50%,-150%) rotate(-14deg);opacity:0}
+.fx-dish{position:relative;padding:20px 8px 6px;text-align:center}
+.fx-date{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:6px}
+.fx-date .fx-dn{font-family:var(--fx-serif);font-size:96px;font-weight:600;line-height:.9;color:var(--fx-leaf-d)}
+.fx-date .fx-dm{text-align:left;font-family:var(--fx-caps);letter-spacing:.16em;text-transform:uppercase;font-size:15px;line-height:1.6;color:var(--fx-ink2)}
+.fx-date .fx-dm b{display:block;color:var(--fx-ink);font-weight:400;font-size:19px}
+.fx-time{display:inline-block;margin-top:12px;padding:8px 20px;border-radius:999px;background:linear-gradient(135deg,#fff6dc,#f3dfa6);border:1px solid var(--fx-gold);
+  font-family:var(--fx-serif);font-weight:600;font-size:24px;color:var(--fx-gold-d)}
+.fx-muh{margin:10px 0 0;font-family:var(--fx-caps);letter-spacing:.24em;text-transform:uppercase;font-size:12.5px;color:var(--fx-leaf)}
+
+/* Side dishes — bowls */
+.fx-sides{display:grid;grid-template-columns:1fr;gap:18px;margin-top:8px}
+@media(min-width:640px){.fx-sides{grid-template-columns:1fr 1fr}}
+.fx-side{position:relative;text-align:center;padding:84px 16px 20px;border-radius:14px;background:rgba(255,255,255,.55);border:1px solid rgba(176,138,62,.3)}
+.fx-bowl{position:absolute;top:-6px;left:50%;width:120px;height:78px;margin-left:-60px}
+.fx-bowl::before{content:"";position:absolute;left:8px;right:8px;top:22px;height:16px;border-radius:50%;background:radial-gradient(#e7a243,#b9611f);z-index:1}
+.fx-bowl.fx-b2::before{background:radial-gradient(#fff3d0,#e9cf8f)}
+.fx-bowl::after{content:"";position:absolute;left:0;right:0;top:26px;bottom:0;border-radius:0 0 60px 60px/0 0 52px 52px;
+  background:radial-gradient(60% 80% at 35% 20%,#fff1c4,#d6a646 40%,#8a6420 90%);box-shadow:0 10px 18px -8px rgba(60,40,10,.5)}
+.fx-bowl .fx-steam{top:-30px}
+.fx-side h3{margin:0;font-family:var(--fx-serif);font-size:28px;font-weight:600;line-height:1.1}
+.fx-side .fx-when{margin:8px 0 0;font-family:var(--fx-caps);font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--fx-leaf-d)}
+.fx-side .fx-hr{display:inline-block;margin-top:8px;font-family:var(--fx-serif);font-size:24px;font-weight:600;color:var(--fx-gold-d)}
+.fx-side p{margin:6px 0 0;color:var(--fx-ink2);font-size:14.5px}
+
+/* Dessert — sweet box countdown */
+.fx-box{position:relative;margin:30px auto 0;max-width:520px;perspective:900px}
+.fx-box-lid{position:absolute;left:-2%;right:-2%;top:-10px;height:34px;border-radius:6px;z-index:3;transform-origin:50% 0;
+  background:linear-gradient(135deg,#2f6b33,#24502a);box-shadow:0 6px 14px rgba(0,0,0,.18);transition:transform 1.4s cubic-bezier(.4,1.3,.5,1) .3s;
+  display:grid;place-items:center;color:var(--fx-tur-l);font-family:var(--fx-caps);letter-spacing:.3em;font-size:11px;text-transform:uppercase}
+.fx-in .fx-box-lid{transform:rotateX(118deg) translateY(-6px)}
+.fx-box-tray{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:30px 10px 14px;border-radius:8px;
+  background:linear-gradient(#f6e7c3,#ecd59f);border:2px solid #c9a14a;box-shadow:inset 0 2px 8px rgba(120,90,30,.25),0 20px 34px -18px rgba(70,50,15,.6)}
+.fx-cup{position:relative;display:grid;place-items:center;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,#fffaf0 0 54%,transparent 55%),repeating-conic-gradient(#e5c167 0 7.5deg,#d2a744 7.5deg 15deg);
+  box-shadow:0 3px 6px rgba(100,70,20,.25)}
+.fx-cup-v{position:relative;height:1.1em;overflow:hidden;font-family:var(--fx-serif);font-weight:700;font-size:clamp(26px,7.5vw,42px);line-height:1.1;color:var(--fx-leaf-d)}
+.fx-cup-v span{display:block}
+.fx-cup-v.fx-tick span{animation:fx-tick .5s cubic-bezier(.3,1.4,.5,1)}
+@keyframes fx-tick{from{transform:translateY(-100%);opacity:.2}to{transform:none;opacity:1}}
+.fx-cup-l{display:block;text-align:center;margin-top:6px;font-family:var(--fx-caps);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--fx-gold-d)}
+.fx-box-labels{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 10px}
+.fx-done{margin:18px 0 0;text-align:center;font-family:var(--fx-serif);font-size:22px;font-style:italic;color:var(--fx-leaf-d)}
+
+/* Special — stamp + leaf */
+.fx-special-top{display:flex;flex-direction:column;align-items:center;gap:14px}
+@media(min-width:700px){.fx-special-top{flex-direction:row;align-items:center;gap:26px}}
+.fx-stamp{position:relative;flex:none;width:150px;height:150px}
+.fx-stamp svg.fx-ring{position:absolute;inset:0;width:100%;height:100%;animation:fx-spin 22s linear infinite}
+.fx-stamp text{font-family:var(--fx-caps);font-size:13.4px;letter-spacing:2.6px;fill:var(--fx-gold-d)}
+.fx-stamp .fx-core{position:absolute;inset:26px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#2f6b33,#1f4a26);
+  color:var(--fx-tur-l);box-shadow:0 0 0 3px #fbf6ea,0 0 0 4px var(--fx-gold),0 12px 24px -10px rgba(30,60,30,.6)}
+.fx-stamp .fx-core svg{width:46px;height:46px}
+@keyframes fx-spin{to{transform:rotate(360deg)}}
+.fx-quote{margin:0;font-family:var(--fx-serif);font-size:23px;line-height:1.4;font-style:italic;color:var(--fx-ink);text-align:center}
+@media(min-width:700px){.fx-quote{text-align:left}}
+.fx-quote small{display:block;margin-top:8px;font-family:var(--fx-sans);font-style:normal;font-size:14px;color:var(--fx-ink2);letter-spacing:.02em}
+.fx-quote small b{color:var(--fx-leaf-d);font-weight:600}
+.fx-bleaf{position:relative;margin:30px auto 0;padding:26px 18px 26px 34px;border-radius:120px 16px 16px 120px/70px 16px 16px 70px;
+  background:linear-gradient(180deg,transparent calc(50% - 1.5px),rgba(225,236,170,.9) calc(50% - 1.5px),rgba(225,236,170,.9) calc(50% + 1.5px),transparent calc(50% + 1.5px)),
+  repeating-linear-gradient(97deg,rgba(255,255,255,.07) 0 2px,transparent 2px 8px),linear-gradient(180deg,#3f7f2a,#66a53e 50%,#3f7f2a);
+  box-shadow:0 18px 30px -16px rgba(30,60,20,.6);display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.fx-chip{padding:6px 13px;border-radius:999px;background:rgba(252,249,242,.95);color:var(--fx-ink);font-family:var(--fx-serif);font-weight:600;font-size:16px;
+  box-shadow:0 4px 10px -4px rgba(0,0,0,.35)}
+.fx-chip::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--fx-c,var(--fx-tur));margin-right:7px;transform:translateY(-1px)}
+.fx-special-when{margin-top:22px;text-align:center;font-family:var(--fx-caps);letter-spacing:.14em;text-transform:uppercase;font-size:13.5px;color:var(--fx-leaf-d);line-height:1.8}
+.fx-special-when b{display:block;font-family:var(--fx-serif);text-transform:none;letter-spacing:0;font-size:24px;color:var(--fx-ink)}
+
+/* Recipe cards */
+.fx-recipes{display:grid;grid-template-columns:1fr;gap:26px;margin-top:6px}
+@media(min-width:700px){.fx-recipes{grid-template-columns:1fr 1fr;gap:20px}}
+.fx-rcard{position:relative;padding:26px 18px 18px 30px;background:
+  linear-gradient(90deg,transparent 20px,rgba(184,50,31,.35) 20px,rgba(184,50,31,.35) 21px,transparent 21px),
+  repeating-linear-gradient(180deg,transparent 0 31px,rgba(61,122,46,.16) 31px 32px),#fffdf7;
+  border-radius:4px;box-shadow:0 14px 28px -14px rgba(70,50,15,.45);transform:rotate(var(--rr,-1.2deg))}
+.fx-rcard:nth-child(2){--rr:1.2deg}
+.fx-rcard::before{content:"";position:absolute;top:-10px;left:50%;width:90px;height:22px;margin-left:-45px;background:rgba(226,163,42,.35);transform:rotate(-3deg);border-left:1px dashed rgba(255,255,255,.6);border-right:1px dashed rgba(255,255,255,.6)}
+.fx-rcard h3{margin:0;font-family:var(--fx-serif);font-size:25px;font-weight:600;line-height:1.15}
+.fx-rcard h4{margin:12px 0 2px;font-family:var(--fx-caps);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--fx-chilli)}
+.fx-rcard ul{list-style:none;margin:0;padding:0}
+.fx-rcard li{padding:5px 0;line-height:1.35}
+.fx-rcard li b{display:block;font-family:var(--fx-serif);font-size:19px;font-weight:600;color:var(--fx-ink)}
+.fx-rcard li span{font-size:13.5px;color:var(--fx-ink2)}
+.fx-method{margin:26px auto 0;max-width:34em;text-align:center;font-family:var(--fx-serif);font-style:italic;font-size:19px;line-height:1.5;color:var(--fx-ink2)}
+.fx-method b{font-family:var(--fx-caps);font-style:normal;font-weight:400;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--fx-leaf);display:block;margin-bottom:4px}
+
+/* Directions */
+.fx-map{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--fx-line);box-shadow:0 0 0 5px #fffaf0,0 0 0 6px var(--fx-line),0 16px 30px -16px rgba(70,50,15,.5);background:#eadfc8}
+.fx-map iframe{display:block;width:100%;height:280px;border:0}
+.fx-addr{text-align:center;margin:22px 0 0}
+.fx-addr b{display:block;font-family:var(--fx-serif);font-size:30px;font-weight:600;line-height:1.1}
+.fx-addr span{color:var(--fx-ink2);font-size:15px}
+.fx-steps{list-style:none;margin:20px 0 0;padding:0;counter-reset:fxs}
+.fx-steps li{position:relative;padding:8px 0 8px 46px;counter-increment:fxs;font-family:var(--fx-serif);font-size:18.5px;line-height:1.4}
+.fx-steps li::before{content:counter(fxs);position:absolute;left:0;top:6px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;
+  background:var(--fx-leaf-d);color:#fbf4df;font-family:var(--fx-caps);font-size:14px}
+
+/* Photo board */
+.fx-board{display:grid;grid-template-columns:1fr 1fr;gap:22px 14px;padding:26px 10px 10px;border-radius:12px;
+  background:radial-gradient(rgba(176,138,62,.12) 1px,transparent 1.4px) 0 0/10px 10px,linear-gradient(#efe4cc,#e6d7b6);box-shadow:inset 0 2px 10px rgba(100,70,20,.25)}
+@media(min-width:760px){.fx-board{grid-template-columns:repeat(4,1fr);padding:34px 22px 22px}}
+.fx-polar{position:relative;padding:8px 8px 10px;background:#fffdf8;border:0;cursor:zoom-in;box-shadow:0 10px 20px -10px rgba(60,40,10,.55);
+  transform:rotate(var(--pr,-3deg));transition:transform .4s cubic-bezier(.3,1.4,.5,1),box-shadow .3s;text-align:center}
+.fx-polar:hover,.fx-polar:focus-visible{transform:rotate(0) scale(1.04);z-index:2;box-shadow:0 18px 28px -12px rgba(60,40,10,.6)}
+.fx-polar img{width:100%;aspect-ratio:3/4;object-fit:cover;background:#eadfc8}
+.fx-polar figcaption{margin-top:7px;font-family:var(--fx-script);font-size:21px;line-height:1;color:var(--fx-ink2)}
+.fx-pin{position:absolute;top:-9px;left:50%;width:18px;height:18px;margin-left:-9px;border-radius:50%;z-index:2;
+  background:radial-gradient(circle at 35% 30%,#fff2c4,#c9a14a 45%,#7d5e22);box-shadow:0 3px 5px rgba(0,0,0,.35)}
+.fx-in .fx-pin{animation:fx-pinpop .5s cubic-bezier(.3,1.8,.5,1) both;animation-delay:calc(var(--d) + .7s)}
+@keyframes fx-pinpop{from{transform:scale(0)}to{transform:scale(1)}}
+.fx-polar.fx-pl{--fx-dy:-80px;--fx-rot:12deg}
+.fx-in .fx-polar.fx-pl{transform:rotate(var(--pr,-3deg))}
+
+/* Reserve */
+.fx-ticket{position:relative;margin:4px auto 0;max-width:440px;padding:22px 20px;border:1.5px dashed var(--fx-gold);border-radius:10px;background:rgba(255,255,255,.6);text-align:left}
+.fx-ticket::before,.fx-ticket::after{content:"";position:absolute;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--fx-paper2);border:1.5px dashed var(--fx-gold)}
+.fx-ticket::before{left:-12px;clip-path:inset(0 0 0 50%)}
+.fx-ticket::after{right:-12px;clip-path:inset(0 50% 0 0)}
+.fx-ticket .fx-item{padding:6px 0;font-size:17px}
+.fx-ticket .fx-item>.fx-v{font-size:15px}
+.fx-reserve-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}
+@media(min-width:560px){.fx-reserve-grid{grid-template-columns:1fr 1fr}}
+.fx-reserve-grid .fx-btn{width:100%}
+.fx-reserve-grid .fx-share{grid-column:1/-1}
+
+/* Footer */
+.fx-foot{position:relative;z-index:2;text-align:center;padding:16vh 16px calc(110px + env(safe-area-inset-bottom))}
+.fx-foot .fx-card{max-width:560px;margin:0 auto}
+.fx-thanks{font-family:var(--fx-script);font-size:clamp(56px,15vw,84px);line-height:1.05;color:var(--fx-leaf-d);margin:0}
+.fx-foot p{font-family:var(--fx-serif);font-size:20px;line-height:1.5;font-style:italic;color:var(--fx-ink2);margin:10px auto 0;max-width:28em}
+.fx-sign{margin-top:16px!important;font-style:normal!important;font-family:var(--fx-caps)!important;letter-spacing:.24em;text-transform:uppercase;font-size:15px!important;color:var(--fx-gold-d)!important}
+.fx-sign b{display:block;font-family:var(--fx-script);text-transform:none;letter-spacing:0;font-weight:400;font-size:44px;color:var(--fx-ink);line-height:1.2}
+
+/* Lightbox */
+.fx-lb{position:fixed;inset:0;z-index:90;display:grid;place-items:center;background:rgba(30,26,20,.88);opacity:0;visibility:hidden;transition:.35s;padding:16px}
+.fx-lb.fx-show{opacity:1;visibility:visible}
+.fx-lb img{max-width:min(92vw,560px);max-height:84vh;width:auto;border:8px solid #fffdf8;box-shadow:0 20px 50px rgba(0,0,0,.5);transform:scale(.92);transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
+.fx-lb.fx-show img{transform:none}
+.fx-lb button{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;font-size:24px;cursor:pointer;display:grid;place-items:center}
+.fx-lb .fx-lb-x{top:calc(14px + env(safe-area-inset-top));right:14px}
+.fx-lb .fx-lb-p{left:10px;top:50%;margin-top:-24px}
+.fx-lb .fx-lb-n{right:10px;top:50%;margin-top:-24px}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important;transition-delay:0s!important;scroll-behavior:auto!important}
+  .fx-pl,.fx-garnish span{opacity:1!important;transform:none!important}
+  .fx-stamp svg.fx-ring{animation:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="fx-sprig" viewBox="0 0 150 26"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 13 Q75 7 146 13"/></g>
+      <g fill="currentColor" opacity=".85">
+        <ellipse cx="30" cy="7" rx="7" ry="2.6" transform="rotate(-20 30 7)"/><ellipse cx="30" cy="18" rx="7" ry="2.6" transform="rotate(20 30 18)"/>
+        <ellipse cx="50" cy="5" rx="7" ry="2.6" transform="rotate(-20 50 5)"/><ellipse cx="50" cy="16" rx="7" ry="2.6" transform="rotate(20 50 16)"/>
+        <ellipse cx="100" cy="5" rx="7" ry="2.6" transform="rotate(20 100 5)"/><ellipse cx="100" cy="16" rx="7" ry="2.6" transform="rotate(-20 100 16)"/>
+        <ellipse cx="120" cy="7" rx="7" ry="2.6" transform="rotate(20 120 7)"/><ellipse cx="120" cy="18" rx="7" ry="2.6" transform="rotate(-20 120 18)"/>
+      </g><circle cx="75" cy="10" r="4" fill="#e2a32a"/><circle cx="75" cy="10" r="1.6" fill="#b8321f"/></symbol>
+    <symbol id="fx-hat" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M19 42c-6-1-11-6-11-12 0-7 6-12 13-11 2-6 6-10 11-10s9 4 11 10c7-1 13 4 13 11 0 6-5 11-11 12v9H19z"/><path d="M19 51h26M25 42v9M32 40v11M39 42v9"/></g></symbol>
+    <symbol id="fx-cloche" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 23a12 12 0 0 1 24 0z"/><path d="M2 26h28"/><circle cx="16" cy="9" r="1.8"/></g></symbol>
+    <symbol id="fx-steamsym" viewBox="0 0 46 60"><path d="M12 58c-8-10 8-16 0-28s6-18 2-28"/><path d="M23 58c-8-10 8-16 0-28s6-18 2-28"/><path d="M34 58c-8-10 8-16 0-28s6-18 2-28"/></symbol>
+  </defs>
+</svg>
+
+<canvas id="fxGL" aria-hidden="true"></canvas>
+<div class="fx-veil" aria-hidden="true"></div>
+<div class="fx-progress" id="fxProgress" aria-hidden="true"></div>
+
+<!-- ============ INTRO ============ -->
+<div class="fx-intro" id="fxIntro" role="button" tabindex="0" aria-label="Tap to lift the lid and open the invitation">
+  <div class="fx-fb" aria-hidden="true"><div class="fx-fb-leaf"></div><div class="fx-fb-pot"><div class="fx-fb-body"></div><div class="fx-fb-lid"></div></div></div>
+  <div class="fx-intro-top">
+    <p class="fx-kicker">From the kitchen of Chef P. Boobalan</p>
+    <h1 class="fx-intro-title"><span>You're invited to a</span><em>Royal Wedding Feast</em></h1>
+    <p class="fx-intro-couple">Boobalan <span>&amp;</span> Saranya</p>
+    <p class="fx-intro-date">Monday · 16 November 2026</p>
+    <p class="fx-greet" id="fxGreet" hidden></p>
+  </div>
+  <div class="fx-intro-bottom">
+    <span class="fx-lift" id="fxLift"><span class="fx-lift-ring"></span><span class="fx-lift-ring r2"></span><svg aria-hidden="true"><use href="#fx-cloche"/></svg>Tap to lift the lid</span>
+    <p class="fx-intro-hint">Best enjoyed with sound on</p>
+  </div>
+</div>
+
+<!-- ============ MAIN ============ -->
+<main class="fx-main" id="fxMain">
+  <div class="fx-wrap">
+
+  <!-- Cover -->
+  <section class="fx-cover fx-sec" id="fx-cover" data-dish="">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <svg class="fx-hat fx-pl fx-pop" aria-hidden="true"><use href="#fx-hat"/></svg>
+      <p class="fx-presents fx-pl" style="--d:.1s">Chef P. Boobalan presents</p>
+      <h1 class="fx-pl" style="--d:.2s"><i>The</i>Wedding Menu</h1>
+      <svg class="fx-sprig fx-pl" style="--d:.3s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+      <p class="fx-names fx-pl" style="--d:.4s">Boobalan <span>&amp;</span> Saranya</p>
+      <p class="fx-cover-meta fx-pl" style="--d:.5s"><b>Monday · 16 November 2026</b><br>Subha Muhurtham · 9:15 – 10:15 AM<br>G.M Mahal · Thiruvellarai · Tiruchirappalli</p>
+      <div class="fx-table fx-pl" style="--d:.6s" id="fxTable">Table reserved for <b>our beloved guests</b></div>
+      <ul class="fx-index">
+        <li class="fx-pl fx-from-l" style="--d:.7s"><a href="#fx-starter"><span class="fx-rn">I</span><span class="fx-ik">Starter</span><span class="fx-dots"></span><span class="fx-iv">The Couple</span></a></li>
+        <li class="fx-pl fx-from-l" style="--d:.78s"><a href="#fx-maincourse"><span class="fx-rn">II</span><span class="fx-ik">Main Course</span><span class="fx-dots"></span><span class="fx-iv">The Wedding</span></a></li>
+        <li class="fx-pl fx-from-l" style="--d:.86s"><a href="#fx-sidedish"><span class="fx-rn">III</span><span class="fx-ik">Side Dishes</span><span class="fx-dots"></span><span class="fx-iv">Engagement &amp; Reception</span></a></li>
+        <li class="fx-pl fx-from-l" style="--d:.94s"><a href="#fx-dessert"><span class="fx-rn">IV</span><span class="fx-ik">Dessert</span><span class="fx-dots"></span><span class="fx-iv">Countdown</span></a></li>
+        <li class="fx-pl fx-from-l" style="--d:1.02s"><a href="#fx-special"><span class="fx-rn">V</span><span class="fx-ik">Special</span><span class="fx-dots"></span><span class="fx-iv">The Feast</span></a></li>
+        <li class="fx-pl fx-from-l" style="--d:1.1s"><a href="#fx-recipe"><span class="fx-rn">VI</span><span class="fx-ik">Family Recipe</span><span class="fx-dots"></span><span class="fx-iv">Our Families</span></a></li>
+        <li class="fx-pl fx-from-l" style="--d:1.18s"><a href="#fx-directions"><span class="fx-rn">VII</span><span class="fx-ik">Directions</span><span class="fx-dots"></span><span class="fx-iv">The Venue</span></a></li>
+        <li class="fx-pl fx-from-l" style="--d:1.26s"><a href="#fx-photoboard"><span class="fx-rn">VIII</span><span class="fx-ik">Photo Board</span><span class="fx-dots"></span><span class="fx-iv">Gallery</span></a></li>
+      </ul>
+      <p class="fx-cue">Scroll to be served<i></i></p>
+    </div>
+  </section>
+
+  <section class="fx-host fx-sec" id="fxHost" hidden>
+    <div class="fx-gap" style="height:8vh"></div>
+    <div class="fx-card">
+      <h3>Personalised Invitation</h3>
+      <p>Type a guest's name to create their own invitation link.</p>
+      <label class="fx-sr" for="fxHostName">Guest name</label>
+      <input class="fx-input" id="fxHostName" type="text" maxlength="60" placeholder="e.g. Ravi &amp; Family" autocomplete="off">
+      <div class="fx-btns">
+        <button class="fx-btn fx-ghost" type="button" id="fxHostCopy">Copy Link</button>
+        <button class="fx-btn" type="button" id="fxHostWa">Send on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="fx-gap"></div>
+
+  <!-- I. Starter -->
+  <section class="fx-course fx-l fx-sec" id="fx-starter" data-dish="kesari">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <header class="fx-head">
+        <svg class="fx-steam" aria-hidden="true"><use href="#fx-steamsym"/></svg>
+        <span class="fx-no fx-pl fx-pop">I</span>
+        <span class="fx-kind fx-pl" style="--d:.1s">Starter</span>
+        <h2 class="fx-title fx-pl" style="--d:.2s">The <i>Couple</i></h2>
+        <svg class="fx-sprig fx-pl" style="--d:.3s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+        <p class="fx-lead fx-pl" style="--d:.35s">Two hearts, gently seasoned with the blessings of our families.</p>
+      </header>
+      <div class="fx-couple">
+        <div class="fx-person">
+          <div class="fx-plate"><span>B</span></div>
+          <h3 class="fx-pname fx-pl" style="--d:.6s">P. Boobalan</h3>
+          <p class="fx-pdeg fx-pl" style="--d:.7s">DTHM., DSCM.</p>
+          <span class="fx-prole fx-pl" style="--d:.75s">South Indian Chef</span>
+          <p class="fx-pof fx-pl" style="--d:.85s">Son of<br><b>Mr. Palanisamy &amp; Mrs. Pangajam</b></p>
+        </div>
+        <div class="fx-weds fx-pl fx-pop" style="--d:.9s">weds<svg aria-hidden="true" viewBox="0 0 150 26"><use href="#fx-sprig"/></svg></div>
+        <div class="fx-person">
+          <div class="fx-plate"><span>S</span></div>
+          <h3 class="fx-pname fx-pl" style="--d:.8s">S. Saranya</h3>
+          <p class="fx-pdeg fx-pl" style="--d:.9s">B.Com (CA).</p>
+          <p class="fx-pof fx-pl" style="--d:1s">Daughter of<br><b>Mr. Singaravelan &amp; Mrs. Jothi</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fx-gap"></div>
+
+  <!-- II. Main course -->
+  <section class="fx-course fx-r fx-sec" id="fx-maincourse" data-dish="sambar">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <header class="fx-head">
+        <svg class="fx-steam" aria-hidden="true"><use href="#fx-steamsym"/></svg>
+        <span class="fx-no fx-pl fx-pop">II</span>
+        <span class="fx-kind fx-pl" style="--d:.1s">Main Course</span>
+        <h2 class="fx-title fx-pl" style="--d:.2s">The <i>Wedding</i></h2>
+        <svg class="fx-sprig fx-pl" style="--d:.3s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+      </header>
+      <div class="fx-dome-stage">
+        <div class="fx-dome" aria-hidden="true"><div class="fx-dome-rim"></div></div>
+        <div class="fx-dish">
+          <p class="fx-muh fx-pl" style="--d:1.2s">Subha Muhurtham</p>
+          <div class="fx-date fx-pl" style="--d:1.3s"><span class="fx-dn">16</span><span class="fx-dm"><b>November</b>2026<br>Monday</span></div>
+          <span class="fx-time fx-pl fx-pop" style="--d:1.5s">9:15 – 10:15 AM</span>
+        </div>
+      </div>
+      <ul class="fx-items">
+        <li class="fx-item fx-pl fx-from-l" style="--d:1.6s"><span class="fx-k">Lagnam</span><span class="fx-dots"></span><span class="fx-v"><b>Thulam Lagnam</b></span></li>
+        <li class="fx-item fx-pl fx-from-l" style="--d:1.7s"><span class="fx-k">Tamil Calendar</span><span class="fx-dots"></span><span class="fx-v">Parabhava Varudam · Iyppasi</span></li>
+        <li class="fx-item fx-pl fx-from-l" style="--d:1.8s"><span class="fx-k">Venue</span><span class="fx-dots"></span><span class="fx-v">G.M Mahal, Thuraiyur Road, Thiruvellarai</span></li>
+      </ul>
+      <div class="fx-btns fx-pl" style="--d:1.9s">
+        <a class="fx-btn fx-brass" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Boobalan+%26+Saranya+Wedding&amp;dates=20261116T034500Z/20261116T044500Z&amp;details=Subha+Muhurtham+of+Boobalan+%26+Saranya&amp;location=G.M+Mahal,+Thuraiyur+Road,+Thiruvellarai,+Tiruchirappalli">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Add to Calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="fx-gap"></div>
+
+  <!-- III. Side dishes -->
+  <section class="fx-course fx-l fx-sec" id="fx-sidedish" data-dish="poriyal,kootu">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <header class="fx-head">
+        <svg class="fx-steam" aria-hidden="true"><use href="#fx-steamsym"/></svg>
+        <span class="fx-no fx-pl fx-pop">III</span>
+        <span class="fx-kind fx-pl" style="--d:.1s">Side Dishes</span>
+        <h2 class="fx-title fx-pl" style="--d:.2s">Engagement <i>&amp;</i> Reception</h2>
+        <svg class="fx-sprig fx-pl" style="--d:.3s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+      </header>
+      <div class="fx-sides">
+        <div class="fx-side fx-pl fx-drop" style="--d:.4s">
+          <div class="fx-bowl" aria-hidden="true"><svg class="fx-steam"><use href="#fx-steamsym"/></svg></div>
+          <h3>Engagement</h3>
+          <p class="fx-when">Sunday · 15 November 2026</p>
+          <span class="fx-hr">After 7:00 PM</span>
+          <p>G.M Mahal, Thiruvellarai</p>
+        </div>
+        <div class="fx-side fx-pl fx-drop" style="--d:.6s">
+          <div class="fx-bowl fx-b2" aria-hidden="true"><svg class="fx-steam"><use href="#fx-steamsym"/></svg></div>
+          <h3>Reception &amp; Grand Feast</h3>
+          <p class="fx-when">Monday · 16 November 2026</p>
+          <span class="fx-hr">After 10:30 AM</span>
+          <p>G.M Mahal, Thiruvellarai</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fx-gap"></div>
+
+  <!-- IV. Dessert -->
+  <section class="fx-course fx-r fx-sec" id="fx-dessert" data-dish="jangiri">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <header class="fx-head">
+        <svg class="fx-steam" aria-hidden="true"><use href="#fx-steamsym"/></svg>
+        <span class="fx-no fx-pl fx-pop">IV</span>
+        <span class="fx-kind fx-pl" style="--d:.1s">Dessert</span>
+        <h2 class="fx-title fx-pl" style="--d:.2s">The <i>Countdown</i></h2>
+        <svg class="fx-sprig fx-pl" style="--d:.3s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+        <p class="fx-lead fx-pl" style="--d:.35s">The sweetest moment is being prepared. It will be served in…</p>
+      </header>
+      <div class="fx-box" id="fxCountdown">
+        <div class="fx-box-lid" aria-hidden="true">Mithai · Made with love</div>
+        <div class="fx-box-tray">
+          <div class="fx-cup fx-pl fx-pop" style="--d:.9s"><span class="fx-cup-v" data-k="d"><span>00</span></span></div>
+          <div class="fx-cup fx-pl fx-pop" style="--d:1s"><span class="fx-cup-v" data-k="h"><span>00</span></span></div>
+          <div class="fx-cup fx-pl fx-pop" style="--d:1.1s"><span class="fx-cup-v" data-k="m"><span>00</span></span></div>
+          <div class="fx-cup fx-pl fx-pop" style="--d:1.2s"><span class="fx-cup-v" data-k="s"><span>00</span></span></div>
+        </div>
+        <div class="fx-box-labels"><span class="fx-cup-l">Days</span><span class="fx-cup-l">Hours</span><span class="fx-cup-l">Minutes</span><span class="fx-cup-l">Seconds</span></div>
+        <p class="fx-done" id="fxDone" hidden>The feast has begun — thank you for your blessings!</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="fx-gap"></div>
+
+  <!-- V. Special -->
+  <section class="fx-course fx-l fx-sec" id="fx-special" data-dish="rasam">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <header class="fx-head">
+        <svg class="fx-steam" aria-hidden="true"><use href="#fx-steamsym"/></svg>
+        <span class="fx-no fx-pl fx-pop">V</span>
+        <span class="fx-kind fx-pl" style="--d:.1s">Special of the House</span>
+        <h2 class="fx-title fx-pl" style="--d:.2s">The <i>Feast</i></h2>
+        <svg class="fx-sprig fx-pl" style="--d:.3s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+      </header>
+      <div class="fx-special-top">
+        <div class="fx-stamp fx-pl fx-pop" style="--d:.4s" aria-hidden="true">
+          <svg class="fx-ring" viewBox="0 0 200 200"><defs><path id="fxCirc" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+            <text><textPath href="#fxCirc">CURATED BY THE GROOM · CHEF P. BOOBALAN · </textPath></text></svg>
+          <div class="fx-core"><svg><use href="#fx-hat"/></svg></div>
+        </div>
+        <p class="fx-quote fx-pl" style="--d:.55s">“An authentic, lavish banana-leaf feast prepared with traditional spices, royal flavours and heartfelt hospitality.”
+          <small>Personally curated by the groom, <b>South Indian Chef P. Boobalan</b></small></p>
+      </div>
+      <div class="fx-bleaf" aria-label="Traditional favourites on the leaf">
+        <span class="fx-chip fx-pl fx-pop" style="--d:.8s;--fx-c:#e9cf9a">Payasam</span>
+        <span class="fx-chip fx-pl fx-pop" style="--d:.86s;--fx-c:#b8742a">Vadai</span>
+        <span class="fx-chip fx-pl fx-pop" style="--d:.92s;--fx-c:#c86a24">Sambar</span>
+        <span class="fx-chip fx-pl fx-pop" style="--d:.98s;--fx-c:#b8321f">Rasam</span>
+        <span class="fx-chip fx-pl fx-pop" style="--d:1.04s;--fx-c:#4f8a2b">Poriyal</span>
+        <span class="fx-chip fx-pl fx-pop" style="--d:1.1s;--fx-c:#cdb85a">Kootu</span>
+        <span class="fx-chip fx-pl fx-pop" style="--d:1.16s;--fx-c:#e9d9a8">Appalam</span>
+        <span class="fx-chip fx-pl fx-pop" style="--d:1.22s;--fx-c:#eaa22a">Laddu</span>
+        <span class="fx-chip fx-pl fx-pop" style="--d:1.28s;--fx-c:#f07a1a">Jangiri</span>
+        <span class="fx-chip fx-pl fx-pop" style="--d:1.34s;--fx-c:#c4421f">Pickle</span>
+      </div>
+      <p class="fx-special-when fx-pl" style="--d:1.4s">Reception &amp; Grand Banana-Leaf Feast<b>Monday, 16 November 2026 · after 10:30 AM</b>G.M Mahal, Thiruvellarai</p>
+    </div>
+  </section>
+
+  <div class="fx-gap"></div>
+
+  <!-- VI. Family recipe -->
+  <section class="fx-course fx-r fx-sec" id="fx-recipe" data-dish="chips">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <header class="fx-head">
+        <svg class="fx-steam" aria-hidden="true"><use href="#fx-steamsym"/></svg>
+        <span class="fx-no fx-pl fx-pop">VI</span>
+        <span class="fx-kind fx-pl" style="--d:.1s">Family Recipe</span>
+        <h2 class="fx-title fx-pl" style="--d:.2s">Our <i>Families</i></h2>
+        <svg class="fx-sprig fx-pl" style="--d:.3s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+      </header>
+      <div class="fx-recipes">
+        <article class="fx-rcard fx-pl fx-from-l" style="--d:.4s">
+          <h3>The Groom's Family</h3>
+          <h4>Ingredients</h4>
+          <ul>
+            <li><b>Mr. Palanisamy</b><span>Father · Deputy Manager, BGR Energy Systems</span></li>
+            <li><b>Mrs. Pangajam</b><span>Mother</span></li>
+            <li><b>Mrs. Rubini (B.E.) &amp; Mr. Selvaraj (M.Sc., MCA)</b><span>Sister &amp; Brother-in-law · Hitachi, Bangalore</span></li>
+            <li><b>Ajay Kumaran &amp; Kiruba Shankar</b><span>Nephews</span></li>
+          </ul>
+        </article>
+        <article class="fx-rcard fx-pl fx-from-r" style="--d:.6s">
+          <h3>The Bride's Family</h3>
+          <h4>Ingredients</h4>
+          <ul>
+            <li><b>Mr. Singaravelan (DME.)</b><span>Father</span></li>
+            <li><b>Mrs. Jothi</b><span>Mother</span></li>
+            <li><b>S. Gowrisankar</b><span>Elder Brother · B.Sc., Hotel Management &amp; Catering Service</span></li>
+            <li><b>S. Swathi (MCA.)</b><span>Younger Sister</span></li>
+          </ul>
+        </article>
+      </div>
+      <p class="fx-method fx-pl" style="--d:.8s"><b>Method</b>Bring two loving families together, simmer slowly with blessings, season with laughter, and serve warm on 16 November 2026.</p>
+    </div>
+  </section>
+
+  <div class="fx-gap"></div>
+
+  <!-- VII. Directions -->
+  <section class="fx-course fx-l fx-sec" id="fx-directions" data-dish="paan">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <header class="fx-head">
+        <svg class="fx-steam" aria-hidden="true"><use href="#fx-steamsym"/></svg>
+        <span class="fx-no fx-pl fx-pop">VII</span>
+        <span class="fx-kind fx-pl" style="--d:.1s">Directions to the Table</span>
+        <h2 class="fx-title fx-pl" style="--d:.2s">The <i>Venue</i></h2>
+        <svg class="fx-sprig fx-pl" style="--d:.3s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+      </header>
+      <div class="fx-map fx-pl" style="--d:.4s">
+        <iframe title="Map to G.M Mahal, Thiruvellarai" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=G.M%20Mahal%20Thuraiyur%20Road%20Thiruvellarai&amp;z=14&amp;output=embed"></iframe>
+      </div>
+      <p class="fx-addr fx-pl" style="--d:.5s"><b>G.M Mahal</b><span>Thuraiyur Road, Thiruvellarai, Tiruchirappalli, Tamil Nadu</span></p>
+      <ol class="fx-steps">
+        <li class="fx-pl fx-from-l" style="--d:.6s">Head to Tiruchirappalli and take the Thuraiyur Road.</li>
+        <li class="fx-pl fx-from-l" style="--d:.7s">Follow the road towards Thiruvellarai.</li>
+        <li class="fx-pl fx-from-l" style="--d:.8s">Arrive at G.M Mahal — your seat at the leaf awaits.</li>
+      </ol>
+      <div class="fx-btns fx-pl" style="--d:.9s">
+        <a class="fx-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=G.M+Mahal+Thuraiyur+Road+Thiruvellarai">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Get Directions</a>
+        <a class="fx-btn fx-ghost" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Boobalan+%26+Saranya+Wedding&amp;dates=20261116T034500Z/20261116T044500Z&amp;details=Subha+Muhurtham+of+Boobalan+%26+Saranya&amp;location=G.M+Mahal,+Thuraiyur+Road,+Thiruvellarai,+Tiruchirappalli">Add to Calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="fx-gap"></div>
+
+  <!-- VIII. Photo board -->
+  <section class="fx-course fx-r fx-sec" id="fx-photoboard" data-dish="ghee" style="max-width:820px">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <header class="fx-head">
+        <svg class="fx-steam" aria-hidden="true"><use href="#fx-steamsym"/></svg>
+        <span class="fx-no fx-pl fx-pop">VIII</span>
+        <span class="fx-kind fx-pl" style="--d:.1s">The Chef's Photo Board</span>
+        <h2 class="fx-title fx-pl" style="--d:.2s">Moments <i>Plated</i></h2>
+        <svg class="fx-sprig fx-pl" style="--d:.3s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+      </header>
+      <div class="fx-board">
+        <button class="fx-polar fx-pl" type="button" data-i="0" style="--d:.4s;--pr:-4deg"><span class="fx-pin"></span><img src="assets/images/img1.jpg" alt="Boobalan and Saranya, photo 1" loading="lazy" width="1000" height="1500"><figcaption>Made with love</figcaption></button>
+        <button class="fx-polar fx-pl" type="button" data-i="1" style="--d:.55s;--pr:3deg"><span class="fx-pin"></span><img src="assets/images/img2.jpg" alt="Boobalan and Saranya, photo 2" loading="lazy" width="1000" height="1500"><figcaption>Secret ingredient</figcaption></button>
+        <button class="fx-polar fx-pl" type="button" data-i="2" style="--d:.7s;--pr:-2deg"><span class="fx-pin"></span><img src="assets/images/img3.jpg" alt="Boobalan and Saranya, photo 3" loading="lazy" width="1000" height="1500"><figcaption>Perfect pairing</figcaption></button>
+        <button class="fx-polar fx-pl" type="button" data-i="3" style="--d:.85s;--pr:4deg"><span class="fx-pin"></span><img src="assets/images/img4.jpg" alt="Boobalan and Saranya, photo 4" loading="lazy" width="1000" height="1500"><figcaption>Chef's favourite</figcaption></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="fx-gap"></div>
+
+  <!-- Reserve -->
+  <section class="fx-course fx-sec" id="fx-reserve" data-dish="">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <header class="fx-head">
+        <svg class="fx-steam" aria-hidden="true"><use href="#fx-steamsym"/></svg>
+        <span class="fx-no fx-pl fx-pop" aria-hidden="true"><svg width="22" height="22" style="color:var(--fx-gold-d)"><use href="#fx-cloche"/></svg></span>
+        <span class="fx-kind fx-pl" style="--d:.1s">Reservations</span>
+        <h2 class="fx-title fx-pl" style="--d:.2s">Reserve your <i>Seat</i></h2>
+        <svg class="fx-sprig fx-pl" style="--d:.3s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+      </header>
+      <div class="fx-ticket fx-pl fx-pop" style="--d:.4s">
+        <div class="fx-item"><span class="fx-k">Reserved for</span><span class="fx-dots"></span><span class="fx-v"><b id="fxTicketName">You &amp; Family</b></span></div>
+        <div class="fx-item"><span class="fx-k">Date</span><span class="fx-dots"></span><span class="fx-v">Mon, 16 Nov 2026</span></div>
+        <div class="fx-item"><span class="fx-k">Seating</span><span class="fx-dots"></span><span class="fx-v">Banana-leaf, with love</span></div>
+        <div class="fx-item"><span class="fx-k">Host</span><span class="fx-dots"></span><span class="fx-v">Chef P. Boobalan</span></div>
+      </div>
+      <div class="fx-reserve-grid fx-pl" style="--d:.6s">
+        <a class="fx-btn" href="tel:+918760337293"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call Groom</a>
+        <a class="fx-btn" href="tel:+916380503795"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call Bride</a>
+        <a class="fx-btn fx-ghost" target="_blank" rel="noopener" href="https://wa.me/918760337293?text=Hello%20Boobalan!%20Congratulations%20on%20your%20wedding.%20I%20received%20your%20invitation%20and%20will%20be%20there%20to%20bless%20you%20both."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>WhatsApp Groom</a>
+        <a class="fx-btn fx-ghost" target="_blank" rel="noopener" href="https://wa.me/916380503795?text=Hello%20Saranya!%20Congratulations%20on%20your%20wedding.%20I%20received%20your%20invitation%20and%20will%20be%20there%20to%20bless%20you%20both."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>WhatsApp Bride</a>
+        <button class="fx-btn fx-brass fx-share" type="button" id="fxShare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>Share this Invitation</button>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <footer class="fx-foot fx-sec" data-dish="">
+    <div class="fx-card">
+      <div class="fx-garnish"></div>
+      <h2 class="fx-thanks fx-pl">Thank You</h2>
+      <svg class="fx-sprig fx-pl" style="--d:.2s" aria-hidden="true"><use href="#fx-sprig"/></svg>
+      <p class="fx-pl" style="--d:.3s">We eagerly look forward to celebrating this special day with you and receiving your heartfelt blessings as we begin our new journey together.</p>
+      <p class="fx-sign fx-pl" style="--d:.5s">With love<b>Boobalan &amp; Saranya</b></p>
+    </div>
+  </footer>
+
+</main>
+
+<button class="fx-music" id="fxMusic" type="button" aria-label="Pause music" aria-pressed="true"><span class="fx-music-bars"><i></i><i></i><i></i><i></i></span></button>
+<audio id="fxAudio" src="assets/audio/wedding-music.mp3" loop preload="auto"></audio>
+<div class="fx-toast" id="fxToast" role="status" aria-live="polite"></div>
+<div class="fx-lb" id="fxLb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="fx-lb-x" type="button" aria-label="Close">&times;</button>
+  <button class="fx-lb-p" type="button" aria-label="Previous photo">&#8249;</button>
+  <img alt="">
+  <button class="fx-lb-n" type="button" aria-label="Next photo">&#8250;</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" onerror="window.__fxNoThree=1"></script>
+<script>
+(function(){
+'use strict';
+var doc=document.documentElement;
+var REDUCE=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+doc.classList.add('fx-locked');
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* ---------- personalisation ---------- */
+var qs=new URLSearchParams(location.search);
+var guest=(qs.get('to')||'').trim().slice(0,60).trim();
+var isHost=qs.has('host');
+if(guest){
+  var g=$('#fxGreet'); g.hidden=false; g.textContent='';
+  g.appendChild(document.createTextNode('Dear '));
+  var gb=document.createElement('b'); gb.textContent=guest; g.appendChild(gb);
+  g.appendChild(document.createTextNode(', this invitation is specially for you'));
+  document.title=guest+' · Boobalan & Saranya · A Royal Wedding Feast';
+  var tb=$('#fxTable b'); tb.textContent=guest;
+  $('#fxTicketName').textContent=guest;
+}
+if(isHost){ $('#fxHost').hidden=false; }
+
+/* ---------- toast & copy ---------- */
+var toastT;
+function toast(msg){var t=$('#fxToast');t.textContent=msg;t.classList.add('fx-show');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('fx-show')},2600);}
+function copyText(text){
+  return new Promise(function(res){
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){res(true)},function(){res(legacy())});}
+    else res(legacy());
+    function legacy(){try{var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.top='-1000px';document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');ta.remove();return ok;}catch(e){return false}}
+  });
+}
+function baseUrl(){return location.origin+location.pathname;}
+
+/* host tools */
+function hostName(){return ($('#fxHostName').value||'').trim().slice(0,60).trim();}
+function hostLink(n){return baseUrl()+'?to='+encodeURIComponent(n);}
+$('#fxHostCopy').addEventListener('click',function(){
+  var n=hostName(); if(!n){toast('Please enter the guest name first');$('#fxHostName').focus();return;}
+  var link=hostLink(n);
+  copyText(link).then(function(ok){ if(ok) toast('Link copied for '+n); else window.prompt('Copy this link:',link); });
+});
+$('#fxHostWa').addEventListener('click',function(){
+  var n=hostName(); if(!n){toast('Please enter the guest name first');$('#fxHostName').focus();return;}
+  var msg='Dear '+n+', we warmly invite you to the wedding of Boobalan & Saranya on Monday, 16 November 2026 at G.M Mahal, Thiruvellarai. 💍\n\nOpen your invitation: '+hostLink(n);
+  window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener');
+});
+$('#fxShare').addEventListener('click',function(){
+  var url=guest?hostLink(guest):baseUrl();
+  var data={title:'Boobalan & Saranya · Wedding Invitation',text:'You are invited to the wedding of Boobalan & Saranya on Monday, 16 November 2026 at G.M Mahal, Thiruvellarai.',url:url};
+  if(navigator.share){navigator.share(data).catch(function(){});}
+  else copyText(url).then(function(ok){toast(ok?'Invitation link copied':'Copy this link: '+url)});
+});
+
+/* ---------- garnish ---------- */
+var gTypes=['mustard','mustard','tur','curry','curry','cumin','chilli'];
+$$('.fx-garnish').forEach(function(box){
+  var n=14;
+  for(var i=0;i<n;i++){
+    var s=document.createElement('span');
+    s.className='fx-g-'+gTypes[(Math.random()*gTypes.length)|0];
+    var edge=Math.random(); var x,y;
+    if(edge<.45){x=4+Math.random()*92;y=1+Math.random()*3.5;}         // top band
+    else if(edge<.7){x=1+Math.random()*3.5;y=4+Math.random()*92;}     // left edge
+    else if(edge<.95){x=95+Math.random()*3.5;y=4+Math.random()*92;}   // right edge
+    else {x=4+Math.random()*92;y=96+Math.random()*2.5;}
+    s.style.setProperty('--x',x+'%');s.style.setProperty('--y',y+'%');
+    s.style.setProperty('--r',(Math.random()*360|0)+'deg');
+    s.style.setProperty('--d',(0.2+Math.random()*0.9).toFixed(2)+'s');
+    s.style.setProperty('--o',(0.55+Math.random()*0.4).toFixed(2));
+    box.appendChild(s);
+  }
+});
+
+/* ---------- countdown ---------- */
+var target=new Date('2026-11-16T09:15:00+05:30').getTime();
+var cdEls={}; $$('#fxCountdown .fx-cup-v').forEach(function(e){cdEls[e.getAttribute('data-k')]=e;});
+function pad(n){return n<10?'0'+n:''+n}
+function setCd(k,v){var e=cdEls[k];var s=e.firstElementChild;if(s.textContent===v)return;s.textContent=v;if(!REDUCE){e.classList.remove('fx-tick');void e.offsetWidth;e.classList.add('fx-tick');}}
+function tick(){
+  var d=target-Date.now();
+  if(d<=0){['d','h','m','s'].forEach(function(k){setCd(k,'00')});$('#fxDone').hidden=false;return;}
+  setCd('d',pad(Math.floor(d/864e5)));setCd('h',pad(Math.floor(d/36e5)%24));setCd('m',pad(Math.floor(d/6e4)%60));setCd('s',pad(Math.floor(d/1e3)%60));
+}
+tick();setInterval(tick,1000);
+
+/* ---------- lightbox ---------- */
+var photos=$$('.fx-polar img').map(function(i){return i.getAttribute('src')});
+var lb=$('#fxLb'),lbImg=$('img',lb),lbI=0;
+function lbShow(i){lbI=(i+photos.length)%photos.length;lbImg.src=photos[lbI];lbImg.alt='Photo '+(lbI+1)+' of '+photos.length;lb.classList.add('fx-show');}
+function lbHide(){lb.classList.remove('fx-show');}
+$$('.fx-polar').forEach(function(b){b.addEventListener('click',function(){lbShow(+b.getAttribute('data-i'))})});
+$('.fx-lb-x',lb).addEventListener('click',lbHide);
+$('.fx-lb-p',lb).addEventListener('click',function(e){e.stopPropagation();lbShow(lbI-1)});
+$('.fx-lb-n',lb).addEventListener('click',function(e){e.stopPropagation();lbShow(lbI+1)});
+lb.addEventListener('click',function(e){if(e.target===lb)lbHide()});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('fx-show'))return;if(e.key==='Escape')lbHide();if(e.key==='ArrowLeft')lbShow(lbI-1);if(e.key==='ArrowRight')lbShow(lbI+1);});
+var tx0=null;lb.addEventListener('touchstart',function(e){tx0=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(tx0==null)return;var dx=e.changedTouches[0].clientX-tx0;if(Math.abs(dx)>50)lbShow(lbI+(dx<0?1:-1));tx0=null;});
+
+/* ---------- music ---------- */
+var audio=$('#fxAudio'),mBtn=$('#fxMusic');
+function setPlaying(p){mBtn.classList.toggle('fx-playing',p);mBtn.setAttribute('aria-pressed',p?'true':'false');mBtn.setAttribute('aria-label',p?'Pause music':'Play music');}
+function playMusic(){try{audio.volume=.75;var p=audio.play();if(p&&p.then)p.then(function(){setPlaying(true)},function(){setPlaying(false)});else setPlaying(true);}catch(e){setPlaying(false)}}
+mBtn.addEventListener('click',function(){if(audio.paused)playMusic();else{audio.pause();setPlaying(false);}});
+
+/* ---------- progress ---------- */
+var prog=$('#fxProgress'),scrollP=0;
+function onScroll(){var h=document.documentElement.scrollHeight-innerHeight;scrollP=h>0?Math.min(1,Math.max(0,scrollY/h)):0;prog.style.transform='scaleX('+scrollP+')';}
+addEventListener('scroll',onScroll,{passive:true});
+
+/* ---------- 3D scene ---------- */
+var GL=null;
+try{ if(!window.__fxNoThree&&window.THREE) GL=buildScene(); }catch(err){ console.warn('3D disabled:',err); GL=null; }
+if(!GL) doc.classList.add('fx-nogl');
+
+/* ---------- reveal observer ---------- */
+var opened=false;
+var io=('IntersectionObserver' in window)?new IntersectionObserver(function(ents){
+  ents.forEach(function(en){
+    if(!en.isIntersecting||!opened)return;
+    var el=en.target; if(el.classList.contains('fx-in'))return;
+    el.classList.add('fx-in');
+    var d=el.getAttribute('data-dish'); if(d&&GL) d.split(',').forEach(function(k,i){GL.serve(k,i*.35,true)});
+  });
+},{threshold:.18,rootMargin:'0px 0px -12% 0px'}):null;
+function startReveals(){
+  var secs=$$('.fx-sec');
+  if(!io){secs.forEach(function(s){s.classList.add('fx-in')});return;}
+  secs.forEach(function(s){io.unobserve(s);io.observe(s)});
+}
+
+/* ---------- opening ---------- */
+var intro=$('#fxIntro');
+function finishOpen(){
+  if(opened)return; opened=true;
+  doc.classList.remove('fx-locked'); doc.classList.add('fx-open');
+  window.scrollTo(0,0); onScroll(); startReveals();
+  setTimeout(function(){intro.style.display='none'},1300);
+}
+function openInvite(){
+  if(intro.classList.contains('fx-opening'))return;
+  intro.classList.add('fx-opening');
+  playMusic();
+  if(GL){ GL.open(finishOpen, REDUCE); setTimeout(finishOpen, 9000); }
+  else setTimeout(finishOpen, REDUCE?50:1000);
+}
+intro.addEventListener('click',openInvite);
+intro.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openInvite();}});
+window.__fxOpen=openInvite;
+
+/* =====================================================================
+   THREE.JS — banana leaf banquet
+   ===================================================================== */
+function buildScene(){
+  var T=THREE;
+  var canvas=$('#fxGL');
+  var renderer=new T.WebGLRenderer({canvas:canvas,antialias:true,powerPreference:'high-performance'});
+  if(!renderer.getContext())throw new Error('no ctx');
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  renderer.outputEncoding=T.sRGBEncoding;
+  renderer.toneMapping=T.ACESFilmicToneMapping; renderer.toneMappingExposure=1.05;
+  renderer.shadowMap.enabled=true; renderer.shadowMap.type=T.PCFSoftShadowMap;
+  var C=function(h){return new T.Color(h).convertSRGBToLinear()};
+  var scene=new T.Scene();
+  scene.background=new T.Color(0xeee5d1);
+  scene.fog=new T.Fog(C(0xeee5d1),14,32);
+  var camera=new T.PerspectiveCamera(40,1,.1,100);
+  var maxA=renderer.capabilities.getMaxAnisotropy();
+  function ctex(w,h,draw,srgb){var c=document.createElement('canvas');c.width=w;c.height=h;draw(c.getContext('2d'),w,h);var t=new T.CanvasTexture(c);if(srgb!==false)t.encoding=T.sRGBEncoding;t.anisotropy=Math.min(8,maxA);return t;}
+  function rnd(a,b){return a+Math.random()*(b-a)}
+
+  /* environment for brass */
+  var envTex=ctex(1024,512,function(g,w,h){
+    var gr=g.createLinearGradient(0,0,0,h);gr.addColorStop(0,'#fffaf0');gr.addColorStop(.32,'#f4e3be');gr.addColorStop(.5,'#b99c6c');gr.addColorStop(.6,'#5c4429');gr.addColorStop(1,'#2a1d10');
+    g.fillStyle=gr;g.fillRect(0,0,w,h);
+    g.filter='blur(14px)';g.fillStyle='#ffffff';g.fillRect(90,70,200,120);g.fillRect(600,50,240,110);g.fillStyle='#fff3d6';g.fillRect(380,150,120,60);
+    g.fillStyle='rgba(50,30,10,.55)';g.fillRect(330,40,40,200);g.fillRect(880,60,50,180);g.filter='none';
+  });
+  envTex.mapping=T.EquirectangularReflectionMapping;
+  var pm=new T.PMREMGenerator(renderer);
+  var env=pm.fromEquirectangular(envTex).texture; pm.dispose();
+  scene.environment=env;
+
+  /* lights */
+  scene.add(new T.HemisphereLight(C(0xfff4e0),C(0x8a7a5a),.35));
+  var sun=new T.DirectionalLight(C(0xfff0d4),1.9); sun.position.set(4,10,6); sun.castShadow=true;
+  var sm=innerWidth>900?2048:1024; sun.shadow.mapSize.set(sm,sm);
+  var sc=sun.shadow.camera; sc.left=-7;sc.right=7;sc.top=7;sc.bottom=-7;sc.near=1;sc.far=30; sun.shadow.bias=-.0006; sun.shadow.radius=4;
+  scene.add(sun);
+  var fill=new T.DirectionalLight(C(0xe6eeff),.35); fill.position.set(-6,5,-4); scene.add(fill);
+
+  /* table linen */
+  var linen=ctex(512,512,function(g,w,h){
+    g.fillStyle='#eee4cf';g.fillRect(0,0,w,h);
+    for(var y=0;y<h;y+=2){g.fillStyle=Math.random()<.5?'rgba(255,253,245,'+(Math.random()*.16)+')':'rgba(140,120,90,'+(Math.random()*.09)+')';g.fillRect(0,y,w,1);}
+    for(var x=0;x<w;x+=2){g.fillStyle=Math.random()<.5?'rgba(255,253,245,'+(Math.random()*.16)+')':'rgba(140,120,90,'+(Math.random()*.09)+')';g.fillRect(x,0,1,h);}
+    for(var i=0;i<260;i++){g.fillStyle='rgba(130,110,80,.07)';g.fillRect(Math.random()*w,Math.random()*h,6+Math.random()*30,1);}
+  });
+  linen.wrapS=linen.wrapT=T.RepeatWrapping; linen.repeat.set(16,16);
+  var table=new T.Mesh(new T.PlaneGeometry(70,70),new T.MeshStandardMaterial({map:linen,roughness:.95,color:C(0xffffff),envMapIntensity:.6}));
+  table.rotation.x=-Math.PI/2; table.receiveShadow=true; scene.add(table);
+
+  /* everything on the table rotates together for portrait screens */
+  var tg=new T.Group(); scene.add(tg);
+
+  /* woven mat under the leaf */
+  var matTex=ctex(1024,448,function(g,w,h){
+    g.fillStyle='#e3cf9b';g.fillRect(0,0,w,h);
+    for(var y=0;y<h;y+=4){var l=70+Math.random()*14;g.fillStyle='hsl(42,'+(45+Math.random()*10)+'%,'+l+'%)';g.fillRect(0,y,w,3);g.fillStyle='rgba(120,90,40,.25)';g.fillRect(0,y+3,w,1);}
+    for(var x=0;x<w;x+=46){g.fillStyle='rgba(120,90,40,.12)';g.fillRect(x,0,2,h);}
+    function band(x0,dir){var cols=['#7a5520','#2f6b33','#e2a32a','#2f6b33','#b8321f','#2f6b33','#e2a32a','#7a5520'];var ws=[10,14,8,6,4,6,8,10];var x=x0;for(var i=0;i<cols.length;i++){g.fillStyle=cols[i];g.globalAlpha=.85;g.fillRect(dir>0?x:x-ws[i],0,ws[i],h);x+=dir*(ws[i]+4);}g.globalAlpha=1;}
+    band(28,1);band(w-28,-1);
+    g.strokeStyle='rgba(110,80,30,.6)';g.lineWidth=10;g.strokeRect(5,5,w-10,h-10);
+  });
+  var mat=new T.Mesh(new T.PlaneGeometry(8.6,3.75),new T.MeshStandardMaterial({map:matTex,roughness:.85}));
+  mat.rotation.x=-Math.PI/2; mat.position.y=.006; mat.receiveShadow=true; tg.add(mat);
+
+  /* ----- banana leaf (custom geometry) ----- */
+  var L=6.8,W=1.42,SU=150,SV=44;
+  function prof(u){var p=u<.22?Math.pow(Math.sin(u/.22*Math.PI/2),.8):1;return p*(1-.06*u);}
+  function leafY(u,v){var x=(u-.5)*L,z=v*W*prof(u);
+    return .032*Math.exp(-Math.pow(v*7,2))+.07*Math.pow(Math.abs(v),3.2)+.011*Math.sin((x+Math.abs(z)*.32)*15)*(.25+.75*Math.abs(v))+.022*Math.sin(u*Math.PI*2.2+.6)+.03;}
+  function leafHeightAt(x,z){var u=Math.min(1,Math.max(0,x/L+.5));var hw=W*prof(u)||1e-3;var v=Math.max(-1,Math.min(1,z/hw));return leafY(u,v);}
+  var pos=[],uvs=[],idx=[];
+  for(var i=0;i<=SU;i++){var u=i/SU,hw=W*prof(u);
+    for(var j=0;j<=SV;j++){var v=j/SV*2-1;pos.push((u-.5)*L,leafY(u,v),v*hw);uvs.push(u,(v+1)/2);}}
+  for(i=0;i<SU;i++)for(j=0;j<SV;j++){var a=i*(SV+1)+j,b=a+SV+1;idx.push(a,a+1,b,b,a+1,b+1);}
+  var lg=new T.BufferGeometry();lg.setAttribute('position',new T.Float32BufferAttribute(pos,3));lg.setAttribute('uv',new T.Float32BufferAttribute(uvs,2));lg.setIndex(idx);lg.computeVertexNormals();
+  var leafTex=ctex(2048,512,function(g,w,h){
+    var gr=g.createLinearGradient(0,0,0,h);gr.addColorStop(0,'#2f6c22');gr.addColorStop(.12,'#3f8229');gr.addColorStop(.42,'#5c9e37');gr.addColorStop(.5,'#68a83f');gr.addColorStop(.58,'#5c9e37');gr.addColorStop(.88,'#3f8229');gr.addColorStop(1,'#2f6c22');
+    g.fillStyle=gr;g.fillRect(0,0,w,h);
+    for(var k=0;k<40;k++){g.fillStyle='rgba('+(Math.random()<.5?'20,60,10':'160,200,90')+','+(Math.random()*.06)+')';g.fillRect(Math.random()*w,0,20+Math.random()*120,h);}
+    g.lineWidth=1.3;
+    for(var x=-80,n=0;x<w+80;x+=5.2,n++){
+      g.strokeStyle=n%4===0?'rgba(220,240,160,.28)':(n%2?'rgba(20,60,15,.16)':'rgba(190,225,130,.12)');
+      g.beginPath();g.moveTo(x,h/2);g.quadraticCurveTo(x+16,h*.25,x+40,0);g.moveTo(x,h/2);g.quadraticCurveTo(x+16,h*.75,x+40,h);g.stroke();
+    }
+    var mr=g.createLinearGradient(0,h/2-16,0,h/2+16);mr.addColorStop(0,'rgba(140,180,80,0)');mr.addColorStop(.3,'#b9d27a');mr.addColorStop(.5,'#e4edb5');mr.addColorStop(.7,'#b9d27a');mr.addColorStop(1,'rgba(140,180,80,0)');
+    g.fillStyle=mr;g.fillRect(0,h/2-16,w,32);
+    g.fillStyle='rgba(150,140,60,.5)';g.fillRect(0,0,w,3);g.fillRect(0,h-3,w,3);
+    g.fillStyle='rgba(220,200,110,.9)';g.fillRect(w-6,0,6,h);
+  });
+  var leafMat=new T.MeshPhysicalMaterial({map:leafTex,bumpMap:leafTex,bumpScale:.012,roughness:.32,metalness:0,clearcoat:.85,clearcoatRoughness:.22,side:T.DoubleSide,envMapIntensity:.9});
+  var leaf=new T.Mesh(lg,leafMat);leaf.receiveShadow=true;leaf.castShadow=true;tg.add(leaf);
+
+  /* ----- helpers ----- */
+  function M(hex,o){var p={color:C(hex),roughness:.6,metalness:0};if(o)for(var k in o)p[k]=o[k];return new T.MeshStandardMaterial(p);}
+  function mesh(geo,m){var x=new T.Mesh(geo,m);x.castShadow=true;x.receiveShadow=true;return x;}
+  function lathe(pts,seg){return new T.LatheGeometry(pts.map(function(p){return new T.Vector2(p[0],p[1])}),seg||64);}
+  function bumpy(geo,amt,f){var p=geo.attributes.position,v=new T.Vector3();for(var i=0;i<p.count;i++){v.fromBufferAttribute(p,i);var n=Math.sin(v.x*f+1.3)*Math.sin(v.y*f*1.7+.4)*Math.sin(v.z*f*1.3+2.1)+.5*Math.sin(v.x*f*2.9+v.z*f*3.1+v.y*f*2.3);v.multiplyScalar(1+amt*n);p.setXYZ(i,v.x,v.y,v.z);}geo.computeVertexNormals();return geo;}
+  var brass=new T.MeshStandardMaterial({color:C(0xd8a94e),metalness:1,roughness:.2,side:T.DoubleSide,envMapIntensity:1.25});
+  var brassDark=new T.MeshStandardMaterial({color:C(0xa77a2c),metalness:1,roughness:.32,envMapIntensity:1.1});
+
+  /* ----- covered brass vessel ----- */
+  var vessel=new T.Group(); tg.add(vessel);
+  var vbody=mesh(lathe([[0,0],[.46,0],[.52,.03],[.5,.08],[.46,.1],[.6,.2],[.73,.34],[.79,.5],[.76,.64],[.66,.76],[.6,.82],[.63,.86],[.64,.885],[.6,.89],[.57,.87]]),brass);
+  vessel.add(vbody);
+  [.48,.53].forEach(function(y){var r=mesh(new T.TorusGeometry(.79,.012,8,96),brassDark);r.rotation.x=Math.PI/2;r.position.y=y;vessel.add(r);});
+  var food=mesh(new T.CircleGeometry(.58,40),M(0xf3ead6,{roughness:.8}));food.rotation.x=-Math.PI/2;food.position.y=.8;vessel.add(food);
+  var lidMat=brass.clone(); lidMat.transparent=true;
+  var lid=new T.Group();
+  var lidM=mesh(lathe([[.67,0],[.66,.035],[.58,.13],[.44,.23],[.24,.3],[.12,.32],[.08,.35],[.1,.4],[.14,.45],[.13,.5],[.07,.55],[0,.56]]),lidMat);
+  lid.add(lidM);
+  var lidRing=mesh(new T.TorusGeometry(.5,.01,8,80),brassDark);lidRing.rotation.x=Math.PI/2;lidRing.position.y=.19;lid.add(lidRing);
+  tg.add(lid);
+  var VS=1.18; vessel.scale.setScalar(VS); lid.scale.setScalar(VS);
+
+  /* ----- tumbler & davara ----- */
+  var tumbler=new T.Group(); tg.add(tumbler);
+  tumbler.add(mesh(lathe([[0,0],[.22,0],[.33,.05],[.41,.13],[.44,.16],[.42,.165],[.38,.12]]),brass));
+  var tb=mesh(lathe([[0,.02],[.17,.02],[.19,.04],[.16,.07],[.19,.3],[.22,.5],[.24,.6],[.25,.62],[.235,.625],[.22,.6]]),brass);tumbler.add(tb);
+  var coffee=mesh(new T.CircleGeometry(.215,32),M(0x7a4b26,{roughness:.25}));coffee.rotation.x=-Math.PI/2;coffee.position.y=.55;tumbler.add(coffee);
+  var foam=mesh(new T.RingGeometry(.12,.215,32),M(0xc89a6a,{roughness:.6}));foam.rotation.x=-Math.PI/2;foam.position.y=.552;tumbler.add(foam);
+
+  /* ----- textures for sprites ----- */
+  var puff=ctex(128,128,function(g){var r=g.createRadialGradient(64,64,0,64,64,64);r.addColorStop(0,'rgba(255,255,255,1)');r.addColorStop(.35,'rgba(255,255,255,.5)');r.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=r;g.fillRect(0,0,128,128);});
+  var star=ctex(64,64,function(g){var r=g.createRadialGradient(32,32,0,32,32,32);r.addColorStop(0,'rgba(255,255,255,1)');r.addColorStop(.2,'rgba(255,255,255,.8)');r.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=r;g.fillRect(0,0,64,64);
+    g.strokeStyle='rgba(255,255,255,.9)';g.lineWidth=2;g.beginPath();g.moveTo(32,2);g.lineTo(32,62);g.moveTo(2,32);g.lineTo(62,32);g.stroke();});
+
+  /* steam emitter */
+  var steams=[];
+  function Steam(parent,o){
+    var grp=new T.Group();grp.position.set(o.x||0,o.y||0,o.z||0);parent.add(grp);
+    var items=[],n=o.count||10,sp=o.spread||.15,ring=o.ring||0;
+    for(var i=0;i<n;i++){var m=new T.SpriteMaterial({map:puff,color:C(o.color||0xffffff),transparent:true,depthWrite:false,opacity:0,fog:false,toneMapped:false});
+      var s=new T.Sprite(m);grp.add(s);items.push({s:s,life:i/n,dur:(o.dur||2.6)*(.8+Math.random()*.5),seed:Math.random()*10,ox:0,oz:0});}
+    function reset(p){if(ring){var a=Math.random()*Math.PI*2;p.ox=Math.cos(a)*ring;p.oz=Math.sin(a)*ring;}else{p.ox=(Math.random()-.5)*sp;p.oz=(Math.random()-.5)*sp;}}
+    items.forEach(reset);
+    var api={group:grp,intensity:o.intensity==null?1:o.intensity,update:function(dt,t){
+      if(api.intensity<=.001){items.forEach(function(p){p.s.visible=false});return;}
+      for(var i=0;i<items.length;i++){var p=items[i];p.life+=dt/p.dur;if(p.life>1){p.life-=1;reset(p);}var L=p.life;p.s.visible=true;
+        p.s.position.set(p.ox*(1+L*.6)+Math.sin(t*1.1+p.seed+L*3)*.15*L,L*(o.h||1.4),p.oz*(1+L*.6)+Math.cos(t*.9+p.seed)*.1*L);
+        var sc=(o.s0||.25)+(o.s1||.9)*L;p.s.scale.set(sc,sc,sc);p.s.material.opacity=Math.sin(Math.PI*Math.min(1,L*1.15))*(o.a||.3)*api.intensity;p.s.material.rotation=p.seed+L*.8;}
+    }};
+    steams.push(api);return api;
+  }
+  var lidSteam=Steam(vessel,{y:.9,count:12,ring:.55,h:.9,s0:.18,s1:.55,a:.38,dur:2.2});
+  var potSteam=Steam(vessel,{y:.85,count:16,spread:.6,h:2.2,s0:.4,s1:1.4,a:.32,dur:3,intensity:0});
+  var goldSteam=Steam(vessel,{y:.85,count:26,spread:.7,h:3.4,s0:.5,s1:1.9,a:.55,dur:1.9,color:0xf7cf74,intensity:0});
+  var cupSteam=Steam(tumbler,{y:.6,count:9,spread:.12,h:1.1,s0:.12,s1:.55,a:.3,dur:2.4});
+
+  /* sparkles */
+  var SPN=260,spPos=new Float32Array(SPN*3),spD=[];
+  for(i=0;i<SPN;i++){spPos[i*3+1]=-99;spD.push({life:1,dur:1,vx:0,vy:0,vz:0});}
+  var spGeo=new T.BufferGeometry();spGeo.setAttribute('position',new T.BufferAttribute(spPos,3));
+  var sparks=new T.Points(spGeo,new T.PointsMaterial({map:star,size:.13,color:C(0xffd879),transparent:true,depthWrite:false,toneMapped:false,fog:false}));
+  sparks.frustumCulled=false;scene.add(sparks);
+  var spI=0;
+  function burst(p,n,power,up){for(var k=0;k<n;k++){var d=spD[spI],o=spI*3;spI=(spI+1)%SPN;var a=Math.random()*Math.PI*2,r=Math.random()*power;
+    spPos[o]=p.x+Math.cos(a)*.1;spPos[o+1]=p.y+Math.random()*.1;spPos[o+2]=p.z+Math.sin(a)*.1;d.vx=Math.cos(a)*r;d.vz=Math.sin(a)*r;d.vy=(up||1.5)*(.5+Math.random());d.life=0;d.dur=.9+Math.random()*1.4;}}
+  function updSparks(dt){for(var k=0;k<SPN;k++){var d=spD[k];if(d.life>=1)continue;d.life+=dt/d.dur;var o=k*3;if(d.life>=1){spPos[o+1]=-99;continue;}
+    spPos[o]+=d.vx*dt;spPos[o+1]+=d.vy*dt;spPos[o+2]+=d.vz*dt;d.vy-=.9*dt;d.vx*=.985;d.vz*=.985;}spGeo.attributes.position.needsUpdate=true;}
+
+  /* ----- dishes ----- */
+  var riceTex=ctex(256,256,function(g,w,h){g.fillStyle='#ece5d2';g.fillRect(0,0,w,h);for(var i=0;i<560;i++){g.save();g.translate(Math.random()*w,Math.random()*h);g.rotate(Math.random()*Math.PI);g.fillStyle='hsl(45,'+(18+Math.random()*14)+'%,'+(91+Math.random()*7)+'%)';g.strokeStyle='rgba(120,105,80,.35)';g.lineWidth=.8;g.beginPath();g.ellipse(0,0,7,2.6,0,0,Math.PI*2);g.fill();g.stroke();g.restore();}});
+  riceTex.wrapS=riceTex.wrapT=T.RepeatWrapping;riceTex.repeat.set(4,2);
+  var papadTex=ctex(256,256,function(g,w,h){g.fillStyle='#f0dca8';g.fillRect(0,0,w,h);for(var i=0;i<260;i++){var r=2+Math.random()*7;g.fillStyle=Math.random()<.6?'rgba(255,248,220,.75)':'rgba(190,150,80,.35)';g.beginPath();g.arc(Math.random()*w,Math.random()*h,r,0,Math.PI*2);g.fill();}for(i=0;i<90;i++){g.fillStyle='rgba(60,40,20,.55)';g.fillRect(Math.random()*w,Math.random()*h,2,2);}});
+
+  function dRice(){var g=new T.Group();var geo=bumpy(new T.SphereGeometry(.56,48,24,0,Math.PI*2,0,Math.PI/2),.025,26);var m=mesh(geo,M(0xffffff,{map:riceTex,bumpMap:riceTex,bumpScale:.01,roughness:.8}));m.scale.y=.55;g.add(m);
+    var dal=mesh(bumpy(new T.SphereGeometry(.2,24,12,0,Math.PI*2,0,Math.PI/2),.05,18),M(0xe9b13a,{roughness:.35}));dal.scale.y=.45;dal.position.y=.27;g.add(dal);
+    var ghee=mesh(new T.SphereGeometry(.05,12,8),M(0xfff0b0,{roughness:.1,transparent:true,opacity:.8}));ghee.position.set(.04,.35,.03);ghee.scale.y=.4;g.add(ghee);return g;}
+  function dBowl(liq,r){var g=new T.Group();var s=(r||.32)/.33;g.add(mesh(lathe([[0,0],[.17,0],[.2,.012],[.26,.05],[.31,.12],[.33,.19],[.335,.2],[.325,.205],[.3,.16]].map(function(p){return [p[0]*s,p[1]*s]})),brass));
+    var l=mesh(new T.CircleGeometry(.31*s,40),M(liq,{roughness:.22}));l.rotation.x=-Math.PI/2;l.position.y=.165*s;g.add(l);g.userData.top=.165*s;return g;}
+  function dPayasam(){var g=dBowl(0xead09c);for(var i=0;i<6;i++){var c=mesh(new T.TorusGeometry(.03,.014,6,10,Math.PI*1.2),M(0xf2deb0,{roughness:.5}));c.rotation.x=-Math.PI/2;c.rotation.z=Math.random()*6;c.position.set(rnd(-.18,.18),.175,rnd(-.18,.18));g.add(c);}
+    for(i=0;i<5;i++){var r=mesh(new T.SphereGeometry(.022,8,6),M(0x5a2e1a,{roughness:.4}));r.position.set(rnd(-.2,.2),.172,rnd(-.2,.2));g.add(r);}return g;}
+  function dSambar(){var g=dBowl(0xc8681f);for(var i=0;i<9;i++){var c=mesh(new T.BoxGeometry(.05,.03,.05),M(i%3?0xe4823a:0x6f9a34,{roughness:.6}));c.position.set(rnd(-.2,.2),.172,rnd(-.2,.2));c.rotation.y=Math.random()*3;g.add(c);}
+    var cl=mesh(new T.SphereGeometry(.03,8,6),M(0x2f6b2f));cl.position.set(.05,.18,-.06);cl.scale.set(1.6,.3,.7);g.add(cl);return g;}
+  function dRasam(){var g=new T.Group();g.add(mesh(lathe([[0,0],[.12,0],[.14,.02],[.12,.04],[.15,.2],[.17,.33],[.18,.36],[.17,.365],[.16,.34]]),brass));var l=mesh(new T.CircleGeometry(.16,24),M(0xb4481d,{roughness:.2}));l.rotation.x=-Math.PI/2;l.position.y=.3;g.add(l);return g;}
+  function dVadai(){var g=new T.Group();var m=M(0xb36c25,{roughness:.75});
+    var a=mesh(bumpy(new T.TorusGeometry(.17,.075,16,32),.06,22),m);a.rotation.x=-Math.PI/2;a.scale.z=.8;a.position.y=.06;g.add(a);
+    var b=mesh(bumpy(new T.TorusGeometry(.16,.07,16,32),.06,25),m);b.rotation.x=-Math.PI/2+.25;b.scale.z=.8;b.position.set(.2,.14,.08);g.add(b);return g;}
+  function dLaddu(){var g=new T.Group();var m=M(0xeba129,{roughness:.55});[[0,0],[.3,.12]].forEach(function(p,i){var s=mesh(bumpy(new T.SphereGeometry(.15,28,20),.07,40),m);s.position.set(p[0],.15,p[1]);g.add(s);
+      for(var k=0;k<3;k++){var c=mesh(new T.SphereGeometry(.018,6,5),M(0x6a3a1a));var a=Math.random()*6;c.position.set(p[0]+Math.cos(a)*.13,.15+rnd(-.05,.08),p[1]+Math.sin(a)*.13);g.add(c);} });return g;}
+  function dBanana(){var pts=[];for(var i=0;i<=12;i++){var t=i/12;pts.push(new T.Vector3((t-.5)*.85,.1+Math.sin(t*Math.PI)*.05,-Math.sin(t*Math.PI)*.16));}
+    var curve=new T.CatmullRomCurve3(pts);var TS=40,RS=12;var geo=new T.TubeGeometry(curve,TS,.085,RS,false);var p=geo.attributes.position;var col=[];var v=new T.Vector3();
+    for(i=0;i<p.count;i++){var seg=Math.floor(i/(RS+1)),t=seg/TS;var c=curve.getPointAt(t);v.fromBufferAttribute(p,i).sub(c);var tp=Math.pow(Math.sin(Math.PI*Math.min(1,Math.max(0,t*1.04-.02))),.55);v.multiplyScalar(Math.max(.18,tp));v.add(c);p.setXYZ(i,v.x,v.y,v.z);
+      var tip=Math.max(0,Math.abs(t-.5)*2-.86)/.14;var cc=new T.Color(0xf2cf45).lerp(new T.Color(0x5a4020),tip).convertSRGBToLinear();col.push(cc.r,cc.g,cc.b);}
+    geo.setAttribute('color',new T.Float32BufferAttribute(col,3));geo.computeVertexNormals();var g=new T.Group();g.add(mesh(geo,new T.MeshStandardMaterial({vertexColors:true,roughness:.45})));return g;}
+  function dPapad(){var geo=new T.CylinderGeometry(.42,.42,.016,56,1);var p=geo.attributes.position;for(var i=0;i<p.count;i++){var x=p.getX(i),z=p.getZ(i),r=Math.sqrt(x*x+z*z),a=Math.atan2(z,x);p.setY(i,p.getY(i)+Math.sin(a*7)*.025*(r/.42)+Math.pow(r/.42,2)*.03);var rr=1+.04*Math.sin(a*11);p.setX(i,x*rr);p.setZ(i,z*rr);}geo.computeVertexNormals();
+    var g=new T.Group();var m=mesh(geo,M(0xffffff,{map:papadTex,bumpMap:papadTex,bumpScale:.01,roughness:.7}));m.position.y=.05;m.rotation.z=.12;g.add(m);return g;}
+  function dPickle(){var g=new T.Group();var m=M(0xc0441c,{roughness:.22});for(var i=0;i<8;i++){var s=mesh(bumpy(new T.SphereGeometry(rnd(.04,.065),10,8),.2,30),m);s.position.set(rnd(-.12,.12),.04+rnd(0,.05),rnd(-.1,.1));g.add(s);}
+    var ch=mesh(new T.CylinderGeometry(.015,.006,.22,8),M(0x3f7d27,{roughness:.4}));ch.rotation.z=Math.PI/2;ch.rotation.y=.6;ch.position.set(.05,.05,.13);g.add(ch);return g;}
+  function dKesari(){var g=new T.Group();var m=mesh(bumpy(new T.SphereGeometry(.26,32,16,0,Math.PI*2,0,Math.PI/2),.04,14),M(0xf4972c,{roughness:.4}));m.scale.y=.6;g.add(m);
+    for(var i=0;i<3;i++){var c=mesh(new T.TorusGeometry(.035,.016,6,10,Math.PI*1.2),M(0xf2deb0));c.position.set(rnd(-.1,.1),.14,rnd(-.1,.1));c.rotation.set(rnd(0,3),rnd(0,3),0);g.add(c);}return g;}
+  function dPoriyal(){var g=new T.Group();var cols=[0x4f8a2b,0x4f8a2b,0x5f9a33,0xf5f0e0,0xe57a2a];for(var i=0;i<70;i++){var a=Math.random()*6.28,r=Math.sqrt(Math.random())*.24;var b=mesh(new T.BoxGeometry(.035,.03,.035),M(cols[i%5],{roughness:.6}));b.position.set(Math.cos(a)*r,.02+(.24-r)*.35*Math.random()+.015,Math.sin(a)*r*.8);b.rotation.set(rnd(0,3),rnd(0,3),rnd(0,3));g.add(b);}return g;}
+  function dKootu(){var g=new T.Group();var m=mesh(bumpy(new T.SphereGeometry(.26,32,16,0,Math.PI*2,0,Math.PI/2),.05,16),M(0xd0ba5c,{roughness:.5}));m.scale.y=.45;g.add(m);for(var i=0;i<8;i++){var b=mesh(new T.BoxGeometry(.04,.03,.04),M(0x6f9a34));b.position.set(rnd(-.15,.15),.1,rnd(-.15,.15));g.add(b);}return g;}
+  function dJangiri(){var pts=[];for(var i=0;i<240;i++){var t=i/240*Math.PI*2;var r=.17+.055*Math.cos(9*t);pts.push(new T.Vector3(Math.cos(t)*r,.04+.008*Math.sin(9*t),Math.sin(t)*r));}
+    var g=new T.Group();var m=new T.MeshPhysicalMaterial({color:C(0xf07a1a),roughness:.28,clearcoat:1,clearcoatRoughness:.15});
+    g.add(mesh(new T.TubeGeometry(new T.CatmullRomCurve3(pts,true),360,.03,8,true),m));
+    var c=mesh(new T.TorusGeometry(.085,.03,8,30),m);c.rotation.x=Math.PI/2;c.position.y=.04;g.add(c);return g;}
+  function dChips(){var g=new T.Group();var m=M(0xf0c64a,{roughness:.45});for(var i=0;i<16;i++){var c=mesh(new T.CylinderGeometry(.065,.065,.012,18),m);c.position.set(rnd(-.14,.14),.02+i*.008,rnd(-.12,.12));c.rotation.set(rnd(-.4,.4),0,rnd(-.4,.4));g.add(c);}return g;}
+  function dPaan(){var g=new T.Group();var leafM=M(0x3f7a2a,{roughness:.3});var c=mesh(new T.ConeGeometry(.12,.34,4),leafM);c.rotation.z=Math.PI/2;c.rotation.x=Math.PI/4;c.position.y=.09;g.add(c);
+    var cl=mesh(new T.CylinderGeometry(.008,.008,.12,6),M(0x5a3518));cl.position.set(.02,.17,0);cl.rotation.z=.3;g.add(cl);
+    var nut=mesh(new T.SphereGeometry(.05,10,8),M(0x8a5530));nut.position.set(-.22,.05,.08);g.add(nut);return g;}
+  function dGhee(){var g=new T.Group();g.add(mesh(lathe([[0,0],[.09,0],[.1,.01],[.12,.06],[.13,.1],[.12,.105],[.11,.08]]),brass));var l=mesh(new T.CircleGeometry(.115,20),M(0xffe08a,{roughness:.1}));l.rotation.x=-Math.PI/2;l.position.y=.08;g.add(l);
+    var sp=mesh(new T.CylinderGeometry(.012,.012,.3,6),brass);sp.position.set(.05,.14,0);sp.rotation.z=-.7;g.add(sp);return g;}
+
+  var dishes={},introKeys=['pickle','banana','laddu','vadai','rice','papad','payasam'];
+  function addDish(key,obj,x,z,ry,steamOpt){obj.position.set(x,leafHeightAt(x,z)-.012,z);obj.rotation.y=ry||0;obj.visible=false;tg.add(obj);
+    var d={obj:obj,target:obj.position.clone(),ry:ry||0,served:false,start:0,landed:false,h:2.8};
+    if(steamOpt){d.steam=Steam(obj,steamOpt);d.steam.intensity=0;}
+    dishes[key]=d;}
+  addDish('pickle',dPickle(),-2.55,0,0);
+  addDish('banana',dBanana(),-1.85,-.5,.15);
+  addDish('laddu',dLaddu(),-1.15,-.82,0);
+  addDish('vadai',dVadai(),-.3,-.75,.3);
+  addDish('rice',dRice(),.3,.38,0,{y:.25,count:10,spread:.4,h:1.3,s0:.18,s1:.7,a:.26,dur:2.8});
+  addDish('papad',dPapad(),1.55,.6,0);
+  addDish('payasam',dPayasam(),2.35,-.6,0,{y:.18,count:6,spread:.25,h:.9,s0:.12,s1:.45,a:.22});
+  addDish('kesari',dKesari(),.55,-.85,0);
+  addDish('sambar',dSambar(),1.45,-.72,0,{y:.18,count:7,spread:.25,h:1,s0:.12,s1:.5,a:.24});
+  addDish('poriyal',dPoriyal(),-.95,.62,0);
+  addDish('kootu',dKootu(),-1.75,.45,0);
+  addDish('jangiri',dJangiri(),2.5,.55,0);
+  addDish('rasam',dRasam(),3.05,-.15,0,{y:.36,count:5,spread:.1,h:.8,s0:.1,s1:.4,a:.22});
+  addDish('chips',dChips(),-2.45,.42,0);
+  addDish('paan',dPaan(),3.0,.95,.4);
+  addDish('ghee',dGhee(),-.4,.08,0);
+
+  var clock=0,focus=new T.Vector3(.3,0,.38),focusT=focus.clone(),mode='intro',openT=-1,onDone=null,doneCalled=false;
+  function serve(key,delay,isScroll){var d=dishes[key];if(!d||d.served)return;d.served=true;d.start=clock+(delay||0);d.h=2.6+Math.random()*.8;
+    if(isScroll){focusT.copy(d.target);}}
+
+  /* ----- layout & camera ----- */
+  var portrait=false,vStart=new T.Vector3(.2,0,.05),vRest=new T.Vector3(2.4,0,-2.35),tumPos=new T.Vector3(-3.25,0,1.65);
+  vessel.position.copy(vStart);lid.position.set(vStart.x,.86*VS,vStart.z);tumbler.position.copy(tumPos);
+  var lidStart=lid.position.clone();
+  var camPos=new T.Vector3(),camLook=new T.Vector3(),wantPos=new T.Vector3(),wantLook=new T.Vector3(),tmp=new T.Vector3();
+  function resize(){var w=innerWidth,h=innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;portrait=w/h<.95;
+    tg.rotation.y=portrait?Math.PI/2:0;camera.fov=portrait?50:38;camera.updateProjectionMatrix();}
+  resize();addEventListener('resize',resize);
+  function introCam(){if(portrait){var k=Math.max(1,.62/camera.aspect);wantPos.set(0,8.4*k*.85,6.6*k*.85);wantLook.set(0,.2,-.35);}else{wantPos.set(0,5.4,6.2);wantLook.set(0,.35,.15);}}
+  function mainCam(t){tg.localToWorld(tmp.copy(focus));var ang=(scrollP-.5)*.7+Math.sin(t*.13)*.05;var k=portrait?Math.max(1,.6/camera.aspect):1;var d=portrait?new T.Vector3(0,5.5*k,3.5*k):new T.Vector3(0,4.4,3.9);
+    d.applyAxisAngle(new T.Vector3(0,1,0),ang);wantLook.copy(tmp);if(portrait)wantLook.z+=0.85*k;wantPos.copy(tmp).add(d);}
+  introCam();camPos.copy(wantPos);camLook.copy(wantLook);
+
+  function easeOutBounce(x){var n=7.5625,d=2.75;if(x<1/d)return n*x*x;if(x<2/d)return n*(x-=1.5/d)*x+.75;if(x<2.5/d)return n*(x-=2.25/d)*x+.9375;return n*(x-=2.625/d)*x+.984375;}
+  function eoc(x){return 1-Math.pow(1-x,3)}function eio(x){return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}function cl(x){return Math.max(0,Math.min(1,x))}
+
+  function update(dt){
+    clock+=dt;var t=clock;
+    if(mode==='intro'){
+      var jig=Math.max(0,Math.sin(t*2.2))*Math.pow(Math.max(0,Math.sin(t*.9)),6);
+      lid.rotation.set(Math.sin(t*28)*.03*jig,0,Math.cos(t*31)*.03*jig);lid.position.y=lidStart.y+Math.abs(Math.sin(t*26))*.025*jig;
+      lidSteam.intensity=.55+jig*.8;
+      introCam();var sway=REDUCE?0:Math.sin(t*.25)*.1;tmp.copy(wantPos).sub(wantLook).applyAxisAngle(new T.Vector3(0,1,0),sway);wantPos.copy(wantLook).add(tmp);
+    } else {
+      var k=t-openT;
+      var p=cl(k/1.7);
+      lid.position.set(lidStart.x+3.4*p*p,lidStart.y+3.2*eoc(p),lidStart.z+.9*p);lid.rotation.set(-.6*p,7*eoc(p),1.1*p);lidMat.opacity=1-cl((p-.6)/.4);lid.visible=p<1;
+      lidSteam.intensity=Math.max(0,1-k*2);
+      goldSteam.intensity=k<.2?0:Math.max(0,Math.min(1,(k-.2)*4)*(1-cl((k-1.6)/2.4)));
+      potSteam.intensity=cl((k-.6)/1.5)*.9;
+      if(k>.2&&!burstDone){burstDone=true;vessel.localToWorld(tmp.set(0,.95,0));burst(tmp,120,1.4,2.6);}
+      var q=eio(cl((k-1.4)/1.1));vessel.position.lerpVectors(vStart,vRest,q);
+      if(mode==='opening'&&k>4.9){mode='main';}
+      if(mode==='main'){if(!doneCalled&&k>5.5){doneCalled=true;onDone&&onDone();}focus.lerp(focusT,1-Math.exp(-dt*1.6));mainCam(t);}
+      else introCam();
+    }
+    for(var key in dishes){var d=dishes[key];if(!d.served)continue;var dk=(t-d.start)/1.05;if(dk<0){d.obj.visible=false;continue;}
+      d.obj.visible=true;var pp=cl(dk);d.obj.position.y=d.target.y+d.h*(1-easeOutBounce(pp));d.obj.rotation.y=d.ry+(1-eoc(pp))*2.6;
+      var sq=pp>.36&&pp<.5?1-.12*Math.sin((pp-.36)/.14*Math.PI):1;d.obj.scale.set(2-sq,sq,2-sq);
+      if(pp>=1&&!d.landed){d.landed=true;d.obj.scale.set(1,1,1);d.obj.localToWorld(tmp.set(0,.15,0));burst(tmp,26,.7,1.1);}
+      if(d.steam)d.steam.intensity=d.landed?Math.min(1,d.steam.intensity+dt*.5):0;}
+    var lerpK=1-Math.exp(-dt*(mode==='main'?1.5:2.5));camPos.lerp(wantPos,lerpK);camLook.lerp(wantLook,lerpK);
+    camera.position.copy(camPos);camera.lookAt(camLook);
+    for(var s=0;s<steams.length;s++)steams[s].update(dt,t);
+    updSparks(dt);
+  }
+  var burstDone=false;
+  var last=performance.now();
+  function frame(now){var dt=Math.max(0,Math.min(.1,(now-last)/1000));last=now;update(dt);renderer.render(scene,camera);requestAnimationFrame(frame);}
+  requestAnimationFrame(frame);
+  window.__fxDbg={camera:camera,camPos:camPos,wantPos:wantPos,renderer:renderer};
+
+  return {
+    open:function(cb,instant){onDone=cb;openT=clock;mode='opening';
+      if(instant){openT=clock-10;introKeys.forEach(function(k){serve(k,-10)});burstDone=true;mode='main';focus.copy(focusT);mainCam(clock);camPos.copy(wantPos);camLook.copy(wantLook);}
+      else introKeys.forEach(function(k,i){serve(k,2.1+i*.3)});},
+    serve:function(k,delay,isScroll){if(mode!=='main')return;serve(k,delay,isScroll);}
+  };
+}
+})();
+</script>
+
+
+
+
+<div style="text-align: center; padding: 40px 20px 80px 20px; position: relative; z-index: 999;">
+  <a href="index.html" style="display: inline-block; background: #8a0c1a; color: white; padding: 14px 28px; border-radius: 30px; font-family: 'Cinzel', 'Marcellus', 'Cormorant Garamond', serif; letter-spacing: 0.05em; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.4); font-size: 16px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">← See Other Designs</a>
+</div>
+
+</body>
+</html>
